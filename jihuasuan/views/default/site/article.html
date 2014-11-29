@@ -1,0 +1,44 @@
+{set:$page = isset($_GET['page'])?intval($_GET['page']):1;}
+{set:$catId = IFilter::act(IReq::get('id'),'int');$catRow = array();}
+{query:name=article_category where=id eq $catId item=$catRow}{/query}
+
+{if:$catRow}
+{query:name=article where=visibility eq 1 and category_id eq $catRow[id] order=id desc id=$article page=$page items=$list}{/query}
+{set:$seo_data=array();$site_config=new Config('site_config');}
+{set:$seo_data['description']=$seo_data['keywords']=$seo_data['title']=$catRow['name']."_".$site_config->name}
+{set:seo::set($seo_data);}
+{else:}
+{query:name=article where=visibility eq 1 order=id desc id=$article page=$page items=$list}{/query}
+{/if}
+
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}">首页</a> » {if:$catRow}{$catRow['name']}{else:}最新资讯{/if} </div>
+<div class="wrapper clearfix container_2">
+	<div class="sidebar f_l">
+	
+
+		<div class="box m_10">
+			<div class="title">资讯分类</div>
+			<div class="content">
+			  <ul class="ranklist">
+				{query:name=article_category limit=10 where=issys eq 0 order=sort asc}
+				<li><a title="{$item['name']}" href="{url:/site/article/id/$item[id]}">{$item['name']}</a></li>
+				{/query}
+			  </ul>
+			</div>
+		</div>
+	</div>
+	<div class="main f_r">
+		<div class="box m_10">
+			<div class="title2">{if:$catRow}{$catRow['name']}{else:}最新资讯{/if}</div>
+			<div class="cont">
+				<h5 class="list_title gray"><span class="f_l">标题</span>发表时间</li></h5>
+				<ul class="newslist">
+					{foreach:items=$list}
+					<li><a href="{url:/site/article_detail/id/$item[id]}">{$item['title']}</a><span>({$item['create_time']})</span></li>
+					{/foreach}
+				</ul>
+				{$article->getPageBar()}
+			</div>
+		</div>
+	</div>
+</div>

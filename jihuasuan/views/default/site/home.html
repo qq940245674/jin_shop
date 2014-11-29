@@ -1,0 +1,68 @@
+{set:$seller_id = IFilter::act(IReq::get('id'),'int')}
+{query:name=seller where=id eq $seller_id item=$sellerRow}{/query}
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}"> 首页</a> » 商户主页 </div>
+<div class="wrapper clearfix container_2">
+
+	<div class="sidebar f_l">
+		<div class="box m_10" style='width:987px;margin-top:5px;'>
+			<div class="title">商户信息</div>
+			<div class="content">
+				<div class="c_box">
+					<dl class="clearfix">
+						<dt><strong>{$sellerRow['true_name']}</strong></dt>
+					</dl>
+
+					<p> 评分：<span class="grade"><i style="width:{echo:Common::gradeWidth(statistics::gradeSeller($sellerRow['id']))}px"></i></span></p>
+					<p> 销量：{echo:statistics::sellCountSeller($sellerRow['id'])} 件</p>
+					<p> 官网：<a href="{$sellerRow['home_url']}" target="_blank" class="orange">点击进入</a></p>
+					<p> 淘宝店铺：<a href="{$sellerRow['home_url']}" target="_blank" class="orange">点击进入</a></p>
+			<!-- 		<p> 联系电话：{$sellerRow['phone']}</p> -->
+					<p> 所在地：{echo:join(' ',area::name($sellerRow['province'],$sellerRow['city'],$sellerRow['area']))} {$sellerRow['address']}</p>
+					{if:$sellerRow['server_num']}
+					<p> 商户联系：{set:Sonline::qqShow($sellerRow['server_num'])}</p>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main f_l" style='width:1000px;'>
+		<div class="display_title" style='border:1px solid #E1E1E1;border-top:none;width:982px;'>
+			<ul>
+				{foreach:items=search_goods::getOrderType()}
+				{set:$next = search_goods::getOrderValue($key)}
+				<li class="{echo:search_goods::isOrderCurrent($key) ? 'current':''}">
+					<a href="{echo:search_goods::searchUrl('order',$next)}">{$item}<span class="{echo:search_goods::isOrderDesc() ? 'desc':''}">&nbsp;</span></a>
+				</li>
+				{/foreach}
+			</ul>
+			<span class="f_l">显示方式：</span>
+			<a class="show_b" href="{echo:search_goods::searchUrl('show_type','win')}" title='橱窗展示' alt='橱窗展示'><span class='{echo:search_goods::getListShow(IReq::get('show_type')) == 'win' ? 'current':''}'></span></a>
+		</div>
+		<br>
+		{set:$goodsObj = search_goods::find(' go.seller_id = '.$seller_id);$resultData = $goodsObj->find();}
+		{if:$resultData}
+		{set:$listSize = search_goods::getListSize(IFilter::act(IReq::get('show_type')))}
+		<ul class="display_list clearfix m_10" style='width:995px;'>
+			{foreach:items=$resultData}
+			<li class="clearfix {echo:search_goods::getListShow(IFilter::act(IReq::get('show_type')))}">
+				<a title="{$item['name']}" class="p_name" href="{url:/site/products/id/$item[id]}">{$item['name']}</a>
+				<div class="pic">
+					<a title="{$item['name']}" href="{url:/site/products/id/$item[id]}"><img src="{webroot:}{echo:Thumb::get($item['img'],280,280)}" width="280" height="280" alt="{$item['name']}" title="{$item['name']}" /></a>
+				</div>
+				<div class="price"><span>￥{$item['sell_price']}</span><s>￥{$item['market_price']}</s><p>销量: {$item['sale']}</p><br>
+					<p style='float:left;margin-top:10px;margin-left:5px;'>剩余:{$item['store_nums']}</p>
+					<a title="{$item['name']}" class='newa' href="{url:/site/products/id/$item[id]}" style='float:right;'>我要抢购</a>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		{$goodsObj->getPageBar()}
+
+		{else:}
+		<p class="display_list mt_10" style='margin-top:50px;margin-bottom:50px;width:995px;'>
+			<strong class="gray f14">对不起，没有找到相关商品</strong>
+		</p>
+		{/if}
+	</div>
+</div>

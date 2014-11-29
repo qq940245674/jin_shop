@@ -1,0 +1,17 @@
+{set:$seo_data=array();$site_config=new Config('site_config');}
+{set:$seo_data['title']=$this->help_row['name'].'_'.$site_config->name;}
+{set:seo::set($seo_data);}
+
+{set:$cat_id=$this->cat_row['id'];}
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}"> 首页</a> » <a href="{url:/site/help_list/id/$cat_id}">{$this->cat_row['name']}</a> </div>
+<div class="container_2 wrapper clearfix">
+<br>
+	<div class="main f_r">
+		<div class="box"><div class="hc_title">{$this->help_row['name']}</div></div>
+		<div class="c_box">
+			<div class="textcontent">
+				{$this->help_row['content']}
+			</div>
+		</div>
+	</div>
+</div>

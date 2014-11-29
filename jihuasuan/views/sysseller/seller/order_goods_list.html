@@ -1,0 +1,83 @@
+{set:$seller_id = $this->seller['seller_id']}
+{set:$siteConfig = new Config("site_config")}
+
+<h4 class="alert_info">您最近的货款明细</h4>
+<h4 class="alert_warning">只有<在线支付>(非货到付款) 并且 <发货后>的商品才会统计到这里</h4>
+
+<article class="module width_full">
+	<header>
+		<h3 class="tabs_involved">商品货款明细</h3>
+		<!-- <ul class="tabs">
+			<li><input type="button" class="alt_btn" onclick="window.location.href='{url:/seller/bill_edit}';" value="申请结算货款" /></li>
+		</ul> -->
+	</header>
+
+	<table class="tablesorter" cellspacing="0">
+		<colgroup>
+			<col width="165px" />
+			<col width="325px" />
+			<col width="110px" />
+			<col width="110px" />
+			<col width="70px" />
+			<col width="85px" />
+			<col width="70px" />
+			<col />
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th>订单号</th>
+				<th>商品信息</th>
+				<th>货款计费</th>
+				<th>返利金额</th>
+				<th>其他计费</th>
+				<th>总计</th>
+				<th>下单时间</th>
+				<th>结算状态</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{set:
+				$page = (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;
+				$orderGoodsQuery = CountSum::getSellerGoodsFeeQuery($seller_id);
+				$orderGoodsQuery->page = $page;
+			}
+
+			{foreach: items = $orderGoodsQuery->find()}
+			{set:$goodsSum    = $item['goods_price'] * $item['goods_nums']}
+			{set:$orderWeight = $item['goods_weight']* $item['goods_nums']}
+			{set:$orderCount = CountSum::countOrderFee($goodsSum,$goodsSum,$orderWeight,$item['province'],$item['distribution'],0,false,$item['if_insured'],$item['invoice'])}
+			<tr>
+				<td title="{$item['order_no']}">{$item['order_no']}</td>
+				<td>
+					<img src='{webroot:$item[img]}' class="ico" />
+					{set:$goodsRow = JSON::decode($item['goods_array'])}
+					{$goodsRow['name']} &nbsp;&nbsp; {$goodsRow['value']}
+					<label class="orange bold">X {$item['goods_nums']} 件</label>
+				</td>
+				<td>￥{$item['goods_price']} x <label class="orange bold">{$item['goods_nums']} 件</label></td>
+				<td>￥{$item['fan_money']}</td>
+				<td width="100px">
+					<p>运费：￥{$orderCount['deliveryPrice']}
+					<p>保价：￥{$orderCount['insuredPrice']}
+					<p>税金：￥{$orderCount['taxPrice']}
+				</td>
+				<td title="{$orderCount['orderAmountPrice']}">￥{$orderCount['orderAmountPrice']}</td>
+				<td title="{$item['create_time']}">{$item['create_time']}</td>
+				<td width="100px">
+					{if:$item['is_checkout'] == 1}
+					<label class="green">已结算</label>
+					{else:}
+					<label class="orange">未结算</label>
+					{/if}
+				</td>
+				<td><a href="{url:/seller/order_show/id/$item[order_id]}"><img title="订单详情" alt="订单详情" src="{skin:images/main/icn_settings.png}" /></a></td>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+
+	{$orderGoodsQuery->getPageBar()}
+</article>

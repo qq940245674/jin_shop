@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>商家管理中心</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,nofollow">
+	<link rel="stylesheet" href="{skin:css/login.css}" />
+	{js:jquery}
+	{js:dialog}
+	{js:form}
+	{js:validate}
+	{js:artTemplate}
+	<script type='text/javascript' src="{theme:javascript/common.js}"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<h1>商家管理中心</h1>
+		<form method="post" name="login" action="{url:/systemseller/login}" autoComplete="off">
+			<div class="login">
+				<ul>
+					<li>
+						<input class="input" type="text" pattern="required" name="username" title="帐号名" />
+					</li>
+					<li>
+						<input class="input" type="password" pattern="required" name="password" title="密码" />
+					</li>
+				</ul>
+				<button type="submit" name="submit" class="btn">登录</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

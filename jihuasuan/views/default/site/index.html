@@ -1,0 +1,413 @@
+{set:
+	$site_config=new Config('site_config');
+	$seo_data=array();
+	$seo_data['title']=$site_config->name;
+	$seo_data['title'].=$site_config->index_seo_title;
+	$seo_data['keywords']=$site_config->index_seo_keywords;
+	$seo_data['description']=$site_config->index_seo_description;
+	seo::set($seo_data);
+}
+<link rel="stylesheet" type="text/css" href="{theme:javascript/jquery.bxSlider/jquery.bxslider.css}" />
+<script type="text/javascript" src="{theme:javascript/jquery.bxSlider/responsiveslides.min.js}"></script>
+<div class="wrapper clearfix">
+	<div class="sidebar f_l">
+		<ul class="sortlist" id='div_allsort'>
+				{query:name=category where=parent_id eq 0 and visibility eq 1 order=sort asc item=$first}
+				<li>
+					<a class='color1' href="{url:/site/pro_list/cat/$first[id]}">{$first['name']}</a>
+					<!--商品分类 浮动div 开始-->
+					<div class="sublist">
+						<div class="items">
+							<strong>选择分类</strong>
+							{query:name=category where=parent_id eq $first[id] and visibility eq 1 order=sort asc item = $second}
+							<dl class="category selected">
+							
+								<dt>
+									<a href="{url:/site/pro_list/cat/$second[id]}">{$second['name']}</a>
+								</dt>
+							
+								<dd>
+									{query:name=category where=parent_id eq $second[id] and visibility eq 1 order=sort asc item = $third}
+									<a href="{url:/site/pro_list/cat/$third[id]}">{$third['name']}</a>|
+									{/query}
+								</dd>
+							</dl>
+							{/query}
+						</div>
+					</div>
+					<!--商品分类 浮动div 结束-->
+				</li>
+			{/query}
+		</ul>
+	</div>
+	<!--幻灯片 开始-->
+	 <div class="main11">
+		<div id="events"></div>
+		{if:$this->index_slide}
+		<div class="callbacks_container">
+		<ul class="bxslider" id="slider4">
+			{foreach:items=$this->index_slide}
+			<li title="{$item['name']}"><a href="{url:$item[url]}" target="_blank"><img src="{webroot:$item[img]}" width="600px" height="330px" title="{$item['name']}" />
+			<p class="caption">{$item['name']}</p>
+			</a></li>
+			{/foreach}
+		</ul>
+		</div>
+		{/if} 
+		<div class='shen'>
+			<span>
+				<img src="{skin:images/front/qiang.gif}"/><strong>您好~欢迎来到集划算！</strong>
+			</span>
+			<div class='open'><a href="{url:/simple/seller}" class='newa1'/>我要开店</a></div>
+			<div class='open' style='margin-left:5px;'><a href="{url:/simple/login?callback=$callback}" class='newa1'/>我要抢购</a></div>
+		</div>
+		<img src="{skin:images/front/one.jpg}"/>
+		<img src="{skin:images/front/two.jpg}"/>
+	</div> 
+	<!--幻灯片 结束-->
+</div>
+
+<br>
+<div class="wrapper clearfix">
+<div class="newmain f_l">
+	<div class='newcenter'>
+	<ul>
+		<li style='border-left:1px solid #DCDCDC;'>
+		<img src="{skin:images/front/new.png}"/><span>每日更新</span><p class='p'>每天10点、20点准时上线<p></li>
+		<li><img src="{skin:images/front/bao.png}"/><span>消费保障</span><p class='p'>商家预存足额保证金<p></li>
+		<li><img src="{skin:images/front/shan.png}"/><span>闪电返款</span><p class='p'> 每笔闪返 50%~90% <p></li>
+		<li style='width:260px;'><img src="{skin:images/front/yan.png}"/><span>品质验证</span><p class='p'>商品质量层层把关<p></li>
+	</ul>
+	</div>
+	<br>
+		<!--最新商品-->
+		<div class="box yellow m_10" >
+			<div class="title2">
+				<span>特卖每日上新，感受上千品牌的舒适生活</span>
+				<a class='more' href='{url:site/pro_list/cat/1}'>查看全部特卖 &gt;</a>
+			</div>	
+			<div class="cont clearfix">
+				<ul class="prolist">
+					{query:name=commend_goods as co join=left join goods as go on co.goods_id eq go.id where=co.commend_id eq 1 and go.is_del eq 0 AND go.id is not null fields=go.img,go.sale,go.fan_money,go.sell_price,go.name,go.market_price,go.id  order=go.sort asc,id desc group = id}	
+					{set:$tmpId=$item['id'];}
+					<?php 
+					
+						if($item['fan_money'] != 0){
+							$item['zhe'] = number_format(($item['sell_price']-$item['fan_money'])/$item['sell_price'],2)*10;	
+						}
+					?>
+					
+					<li style="overflow:hidden;background:white;margin-left:24px;">
+						<a href="{url:/site/products/id/$tmpId}">
+						<img src="{webroot:}{$item['img']}" width="300" height="320" alt="{$item['name']}" />
+						</a>
+						<p class="newtitle"><a title="{$item['name']}" href="{url:/site/products/id/$tmpId}">{$item['name']}</a></p>
+						<div class='newprice'>
+							<i>￥</i>
+							{$item['sell_price']}
+						</div>
+						<p style='margin-left:190px;font-size:14px;margin-top:17px;color:#F72862;'>返利 ￥{$item['fan_money']}</span></p>
+						<div class='zhi'>
+						<p class='newbaoyou'><span style='color:white;display:block;font-size:14px;'>包 邮</span></p>
+						<p class='newbaoyou'><span style='color:#FFFFFF;display:block;font-size:14px;padding-left:5px;'><?php if(isset($item['zhe'])){ echo $item['zhe'].' 折';}else{echo '0 折';}?></span></p>
+						<p style='font-size:15px;color:#555555;margin-top:10px;float:right;margin-right:30px;'><span style='color:#599E07;'>{$item['sale']}</span>人已买</p>
+						</div>
+					</li>
+				
+					{/query}
+					
+				</ul>
+			</div>
+		</div>
+		<!-- 衣服 -->
+		<div class="brand box m_10" style='border-top:none;border-left:none;border-right:none;height:520px;overflow:hidden;'>
+			<div class='top'>
+				<div class='cloth'>|&nbsp;今日上新<strong>124</strong>件</div>
+				<div class='ahref'><a href="#" >查看所有衣服 ></a></div>
+			</div>
+			<div class='top2'>
+			{if:$this->cloth}
+				{foreach:items=$this->cloth}
+					<div class='pi'>
+					<a href="{url:/site/products/id/$tmpId}"><img src="{webroot:}{$item['img']}" width="180" height="225" alt="{$item['name']}" /></a>
+					<a class="picbottom" href="{url:/site/products/id/$tmpId}"><span>{$item['name']}</span></a>
+					</div>
+				{/foreach}
+			{/if}
+			</div>
+			<div class='topright'>
+				<div class="cmn_title">
+				<p class="f14_f">
+				<a  href="#">
+				更多好店
+				<samp> ></samp>
+				</a>
+				</p>
+				<h3 class="f16_f"  style='color:#FF4400;'>最热好店</h3>
+				</div>
+				<ul>
+				{foreach:items=$this->sellerRow}
+					<li>
+						<img src="{webroot:}{$item['img']}" width="35" height="35" alt="{$item['name']}" />
+						<a href="{webroot:}site/home/id/{$item['seller_id']}"><span>{$item['seller_name']}</span></a><br>
+						<span style='margin-top:5px;'><span style='color:#FF4400;'>{$item['count']}</span>件商品/总销量{$item['sumsale']}</span>
+					</li>
+				{/foreach}		
+				</ul>
+			</div>
+		</div>
+		<!-- 衣服 -->
+		
+		<!-- 鞋子 -->
+		<div class="brand box m_10" style='border-top:none;border-left:none;border-right:none;height:530px;overflow:hidden;'>
+			<div class='top'>
+				<div class='shoe'>|&nbsp;今日上新<strong>124</strong>件</div>
+				<div class='ahref'><a href="#" >查看所有鞋子 ></a></div>
+			</div>
+			<div class='top2'>
+				{if:$this->shoe}
+				{foreach:items=$this->shoe}
+					<div class='pi'>
+					<a href="{url:/site/products/id/$tmpId}"><img src="{webroot:}{$item['img']}" width="180" height="225" alt="{$item['name']}" /></a>
+					<a class="picbottom" href="{url:/site/products/id/$tmpId}"><span>{$item['name']}</span></a>
+					</div>
+				{/foreach}
+				{/if}
+			</div>
+			<div class='topright2'>
+				<div class="cmn_title">
+				<p class="f14_f">
+				<a  href="#">
+				更多推荐
+				<samp> ></samp>
+				</a>
+				</p>
+				<h3 class="f16_f" style='color:#FF4400;'>极品推荐</h3>
+				</div>
+				<div class='ulli'>
+				<ul>
+				{if:$this->tuijian}
+				{foreach:items=$this->tuijian}
+					<li>
+						<a class="pic" href="{url:/site/products/id/$item[id]}">
+						<img src="{webroot:}{echo:Thumb::get($item['img'],85,85)}" alt="{$item['name']}" />
+						</a>
+						<h4>{$item['name']}</h4>
+						<span>集划算向您推荐,惊喜返利价</span>
+						<p>￥{$item['fan_money']}</p>
+					</li>
+				{/foreach}
+				{/if}				
+				</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 鞋子 -->
+		
+		
+		<!-- 手机/超值团购 -->
+		<div class="brand box m_10" style='border-top:none;border-left:none;border-right:none;height:540px;overflow:hidden;'>
+			<div class='top'>
+				<div class='phone'>|&nbsp;今日上新<strong>124</strong>件</div>
+				<div class='ahref'><a href="#" >查看所有电子产品 ></a></div>
+			</div>
+			<div class='top2'>
+				{if:$this->phone}
+				{foreach:items=$this->phone}
+					<div class='pi'>
+					<a href="{url:/site/products/id/$tmpId}"><img src="{webroot:}{$item['img']}" width="180" height="225" alt="{$item['name']}" /></a>
+					<a class="picbottom" href="{url:/site/products/id/$tmpId}"><span>{$item['name']}</span></a>
+					</div>
+				{/foreach}
+				{/if}
+			</div>
+			<div class='topright3'>
+				<div class="cmn_title">
+				<p class="f14_f">
+				<a href="#">
+				更多热卖
+				<samp> ></samp>
+				</a>
+				</p>
+				<h3 class="f16_f"  style='color:#FF4400;'>划算热卖</h3>
+				</div>
+				<ul>
+				<div class='ulli'>
+				{foreach:items=$this->hotsell}
+					<li>
+						<img src="{webroot:}{$item['img']}" width="105" height="125" alt="" />
+					</li>
+				{/foreach}		
+				</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 手机 -->
+		
+		
+		<!-- 配饰 -->
+		<div class="brand box m_10" style='border-top:none;border-left:none;border-right:none;height:540px;overflow:hidden;'>
+			<div class='top'>
+				<div class='peishi'>|&nbsp;今日上新<strong>124</strong>件</div>
+				<div class='ahref'><a href="#" >查看所有配饰 ></a></div>
+			</div>
+			<div class='top2'>
+			{if:$this->peishi}
+				{foreach:items=$this->peishi}
+					<div class='pi'>
+					<a href="{url:/site/products/id/$tmpId}"><img src="{webroot:}{$item['img']}" width="180" height="225" alt="{$item['name']}" /></a>
+					<a class="picbottom" href="{url:/site/products/id/$tmpId}"><span>{$item['name']}</span></a>
+					</div>
+				{/foreach}
+			{/if}
+			</div>
+			<div class='topright3'>
+				<div class="cmn_title">
+				<p class="f14_f">
+				<a href="#">
+				更多特价
+				<samp> ></samp>
+				</a>
+				</p>
+				<h3 class="f16_f"  style='color:#FF4400;'>限时特价</h3>
+				</div>
+				<ul>
+				{foreach:items=$this->tesell}
+					<li>
+						<img src="{webroot:}{$item['img']}" width="105" height="125" alt="" />
+					</li>
+				{/foreach}		
+				</ul>
+			</div>
+		</div>
+		<!-- 配饰 -->
+		
+		
+		<!--品牌列表-->
+		<div class="brand box m_10">
+			<div class="lititle"><h2><img src="{skin:images/front/brand.gif}" alt="品牌推荐" width="155" height="36" style='float:left;'/></h2><a class="more" href="{url:/site/brand}">查看全部品牌 &gt;</a></div>
+			<div class="cont clearfix" style='clear:both;'>
+				<ul style='margin-left:50px;margin-top:10px;'>
+					{query:name=brand fields=id,name,logo order=sort asc limit=20}
+					{set:$tmpId=$item['id'];}
+					<li><a href="{url:/site/brand_zone/id/$tmpId}"><img src="{webroot:$item[logo]}"  width="190" height="90"/></a></li>
+					{/query}
+				</ul>
+			</div>
+		</div>
+		<!--品牌列表-->
+
+		<!--最新评论-->
+		<div class="comment box m_10">
+			<div class="lititle" style='float:left;'><h2><img src="{skin:images/front/comment.gif}" alt="最新评论" width="155" height="36" /></h2></div>
+			<div class="cont clearfix">
+				{query:name=comment as co
+					join=left join goods as go on co.goods_id eq go.id
+					order=co.id desc
+					limit=6
+					where=co.status eq 1 AND go.is_del eq 0 AND go.id is not null
+					fields=go.img as img,go.name as name,co.point,co.contents,co.goods_id
+				}
+				<dl class="no_bg">
+					{set:$tmpGoodsId=$item['goods_id'];}
+					<dt><a href="{url:/site/products/id/$tmpGoodsId}"><img src="{webroot:}{echo:Thumb::get($item['img'],66,66)}" width="66" height="66" /></a></dt>
+					<dd><a href="{url:/site/products/id/$tmpGoodsId}">{$item['name']}</a></dd>
+					<dd><span class="grade"><i style="width:{echo:$item['point']*14}px"></i></span></dd>
+					<dd class="com_c">{$item['contents']}</dd>
+				</dl>
+				{/query}
+			</div>
+		</div>
+		<!--最新评论-->
+	</div>
+</div>
+
+<script type='text/javascript'>
+//dom载入完毕执行
+jQuery(function()
+{
+	//幻灯片开启
+	$("#slider4").responsiveSlides({
+		auto: true,
+		pager: false,
+		nav: true,
+		speed: 500,
+		namespace: "callbacks",
+		before: function () {
+		  $('.events').append("");
+		},
+		after: function () {
+		  $('.events').append("");
+		}
+	  });
+	  
+
+	//index 分类展示
+	$('#index_category tr').hover(
+		function(){
+			$(this).addClass('current');
+		},
+		function(){
+			$(this).removeClass('current');
+		}
+	);
+
+	//email订阅 事件绑定
+	var tmpObj = $('input:text[name="orderinfo"]');
+	var defaultText = tmpObj.val();
+	tmpObj.bind({
+		focus:function(){checkInput($(this),defaultText);},
+		blur :function(){checkInput($(this),defaultText);}
+	});
+
+	$.fn.getHexBackgroundColor = function() { var rgb = $(this).css('color'); if(!$.browser.msie){ rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/); function hex(x) {return ("0" + parseInt(x).toString(16)).slice(-2);} rgb= "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]); } return rgb; }
+	
+	//导航颜色
+	$(".color1").hover(function(){
+		$(this).css({"color":"white"});
+	},function(){
+		var newObject = $(this);
+		var color = newObject.getHexBackgroundColor();
+		$(".items").hover(function(){
+		
+			if(color == '#ffffff' || color == 'rgb(255, 255, 255)' || color == 'white'){
+				$(".color1").css({"color":"#333333"});
+				newObject.css({"color":"#ffffff"});
+			}
+		},function(){
+			newObject.css({"color":"#333333"});
+		});
+		$(".color1").css({"color":"#333333"});
+	});
+
+
+	//首页商品变色
+	var colorArray = ['green','yellow','purple'];
+	$('div[name="showGoods"]').each(function(i)
+	{
+		$(this).addClass(colorArray[i%colorArray.length]);
+	});
+});
+
+//电子邮件订阅
+function orderinfo()
+{
+	var email = $('[name="orderinfo"]').val();
+	if(email == '')
+	{
+		alert('请填写正确的email地址');
+	}
+	else
+	{
+		$.getJSON('{url:/site/email_registry}',{email:email},function(content){
+			if(content.isError == false)
+			{
+				alert('订阅成功');
+				$('[name="orderinfo"]').val('');
+			}
+			else
+				alert(content.message);
+		});
+	}
+}
+</script>

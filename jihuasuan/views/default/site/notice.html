@@ -1,0 +1,19 @@
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}"> 首页</a> » 商城公告 </div>
+<div class="wrapper clearfix container_2">
+
+<div class="main f_r">
+	<div class="box m_10">
+		<div class="title2">商城公告</div>
+		<div class="cont">
+			<h5 class="list_title gray"><span class="f_l">标题</span>发表时间</li></h5>
+			<ul class="newslist">
+				{set:$page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;}
+				{query:name=announcement order=id desc id=$announcement page=$page}
+				<li><a class="" href="{url:/site/notice_detail/id/$item[id]}">{$item['title']}</a><span>({$item['time']})</span></li>
+				{/query}
+			</ul>
+			{$announcement->getPageBar()}
+		</div>
+	</div>
+</div>
+</div>

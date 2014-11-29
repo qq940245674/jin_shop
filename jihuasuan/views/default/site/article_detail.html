@@ -1,0 +1,47 @@
+{set:
+	$seo_data=array();
+	$site_config=new Config('site_config');
+	$seo_data['title']=$this->articleRow['title'];
+	$seo_data['title'].="_".$site_config->name;
+	$seo_data['keywords']=$this->articleRow['keywords'];
+	$seo_data['description']=$this->articleRow['description'];
+	seo::set($seo_data);
+}
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}"> 首页</a> » <a href="{url:/site/article}">资讯列表</a> » {$this->articleRow['title']} </div>
+<div class="wrapper clearfix container_2">
+	
+	<div class="main f_r">
+		<div class="box m_10">
+			<div class="title2">商城资讯</div>
+			<div class="cont">
+				<div class="c_box">
+					<h2>{$this->articleRow['title']}</h2>
+					<div class="partake_bar clearfix">
+						<span class="f_r"></span>发布日期：{$this->articleRow['create_time']}
+					</div>
+					<hr class="m_10" />
+					<div class="textcontent">
+						<p>{$this->articleRow['content']}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{if:!empty($this->relationList)}
+		<div class="box m_10">
+			<div class="title2 m_10">相关商品</div>
+			<div class="parts clearfix">
+				<ul class="prolist">
+					{foreach:items = $this->relationList}
+					<li>
+						<a href="{url:/site/products/id/$item[id]}"><img width="98" height="106" src="{webroot:}{echo:Thumb::get($item['img'],98,106)}" alt="{$item['name']}"></a>
+						<p class="pro_title"><a href="{url:/site/products/id/$item[id]}">{$item['name']}</a></p>
+						<p class="brown"><b>￥{$item['sell_price']}</b></p>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		{/if}
+	</div>
+</div>

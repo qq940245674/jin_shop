@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-y:auto">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理后台</title>
+<link rel="stylesheet" href="{skin:css/admin.css}" />
+{js:jquery}
+{js:dialog}
+{js:form}
+{js:validate}
+{js:artTemplate}
+<script type='text/javascript' src="{theme:javascript/common.js}"></script>
+<script type='text/javascript' src="{theme:javascript/admin.js}"></script>
+<script type='text/javascript' src='{theme:javascript/artTemplate/area_select.js}'></script>
+</head>
+
+<body style="width:750px;min-height:400px;">
+<div class="pop_win">
+	<form action="{url:/order/order_delivery_doc}" method="post" id="deliver_form">
+		<input type="hidden" name="order_no" value="{$order_no}"/>
+		<input type="hidden" name="id" value="{$order_id}"/>
+		<input type="hidden" name="weight_total" id="weight_total" value="{$goods_weight}"/>
+		<input type="hidden" name="user_id" value="{$user_id}"/>
+		<input type="hidden" name="freight" value="{$real_freight}" />
+		<input type="hidden" name="delivery_type" value="{$distribution}" />
+
+		<table width="95%" class="border_table" style="margin:10px auto">
+			<colgroup>
+				<col />
+				<col width="80px" />
+				<col width="130px" />
+				<col width="30px" />
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>商品名称</th>
+					<th>商品价格</th>
+					<th>购买数量</th>
+					<th onclick="selectAll('sendgoods[]')">选择发货</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{query:name=order_goods as og join=left join goods as go on go.id eq og.goods_id fields=og.*,go.seller_id where=og.order_id eq $order_id}
+				<tr>
+					<td>
+						{if:$item['seller_id']}
+						<img src="{skin:images/admin/seller_ico.png}" alt="商户商品" title="商户商品" />
+						{/if}
+						{set:$goodsRow = JSON::decode($item['goods_array'])}
+						{$goodsRow['name']} &nbsp;&nbsp; {$goodsRow['value']}
+					</td>
+					<td>{$item['real_price']}</td>
+					<td>{$item['goods_nums']}</td>
+					<td>
+						{if:$item['is_send'] == 1}
+						<input type="checkbox" checked="checked" disabled="disabled" "title="商品已经发货" />
+						{else:}
+						<input type="checkbox" name="sendgoods[]" value="{$item['id']}" />
+						{/if}
+					</td>
+				</tr>
+				{/query}
+			</tbody>
+		</table>
+
+		<table width="95%" class="border_table" style="margin:10px auto">
+			<col width="100px" />
+			<col />
+			<col width="100px" />
+			<col />
+			<tbody>
+				<tr>
+					<th>订单号:</th><td align="left">{$order_no}</td>
+					<th>下单时间:</th><td align="left">{$create_time}</td>
+				</tr>
+				<tr>
+					<th>配送方式:</th>
+					<td align="left">
+						<select pattern="required" alt="配送方式" disabled="disabled">
+						{query:name=delivery}
+						<option value="{$item['id']}" {if:$distribution==$item['id']}selected{/if}>{$item['name']}</option>
+						{/query}
+						</select>
+					</td>
+					<th>配送费用:</th><td align="left">{$real_freight}</td>
+				</tr>
+				<tr>
+					<th>是否保价:</th><td align="left">{if:$if_insured==0}否{else:}是{/if}</td><th>保价费用:</th><td align="left">￥{$insured}</td>
+				</tr>
+				<tr>
+					<th>收货人姓名:</th><td align="left"><input type="text" class="small" name="name" value="{$accept_name}" pattern="required"/></td>
+					<th>电话:</th><td align="left"><input type="text" class="small" name="telphone" value="{$telphone}" pattern="phone" empty /></td>
+				</tr>
+				<tr>
+					<th>手机:</th><td align="left"><input type="text" class="small" name="mobile" value="{$mobile}" pattern="mobi"/></td>
+					<th>邮政编码:</th><td align="left"><input type="text" name="postcode" class="small" value="{$postcode}" pattern="zip" empty /></td>
+				</tr>
+				<tr>
+					<th>物流公司：</th>
+					<td align="left">
+						<select name="freight_id" pattern="required">
+							{query:name=freight_company where=is_del eq 0}
+							<option value="{$item['id']}">{$item['freight_name']}</option>
+							{/query}
+						</select>
+					</td>
+					<th>配送单号:</th>
+					<td align="left">
+						<input type="text" class="normal" name="delivery_code" pattern="required" />
+					</td>
+				</tr>
+				<tr>
+					<th>地区:</th>
+					<td align="left" colspan="3">
+						<select name="province" child="city,area" onchange="areaChangeCallback(this);"></select>
+						<select name="city" child="area" parent="province" onchange="areaChangeCallback(this);"></select>
+						<select name="area" parent="city" pattern="required"></select>
+					</td>
+				</tr>
+				<tr>
+					<th>地址:</th><td align="left" colspan="3"><input type="text" class="normal" name="address" value="{$address}" size="50" pattern="required"/></td>
+				</tr>
+				<tr>
+					<th>发货单备注:</th><td align="left" colspan="3"><textarea name="note" class="normal"></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>
+
+<script type="text/javascript">
+//DOM加载完毕
+$(function(){
+	//初始化地域联动
+	template.compile("areaTemplate",areaTemplate);
+
+	createAreaSelect('province',0,{$province});
+	createAreaSelect('city',{$province},{$city});
+	createAreaSelect('area',{$city},{$area});
+});
+
+/**
+ * 生成地域js联动下拉框
+ * @param name
+ * @param parent_id
+ * @param select_id
+ */
+function createAreaSelect(name,parent_id,select_id)
+{
+	//生成地区
+	$.getJSON("{url:/block/area_child}",{"aid":parent_id,"random":Math.random()},function(json)
+	{
+		$('[name="'+name+'"]').html(template.render('areaTemplate',{"select_id":select_id,"data":json}));
+	});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,4353 @@
+<ERROR_INFO>
+Mess: SELECT img,sale,seller_id,fan_money,sell_price,name,id FROM li_goods WHERE is_del=0 and id is not null left join category_extend as c on goods.id = c.goods_id and c.category_id = 1 ORDER BY sale DESC  limit 50000
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join category_extend as c on goods.id = c.goods_id and c.category_id = 1 OR' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:228  	File:IWEB_PATH/web\model\model_class.php
+	Func:query1         	Class:IModel         	Type:->   	Line:60   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:getHotCloth    	Class:Site           	Type:->   	Line:51   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+errID:2
+errStr:Invalid argument supplied for foreach()
+errFile:D:\wamp\www\iwebshop\runtime\default\site\index.php
+errLine:218
+errTime:14-11-26 10:04:33
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\index.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_commend_goods as co',
+      'fields' => 'go.img,go.sale,go.fan_money,go.sell_price,go.name,go.market_price,go.id',
+      'where' => 'where co.commend_id = 1 and go.is_del = 0 AND go.id is not null',
+      'join' => 'left join li_goods  as go on co.goods_id = go.id',
+      'group' => 'GROUP BY id',
+      'having' => '',
+      'order' => 'order by go.sort asc,id desc',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042442362.jpg',
+      'sale' => '0',
+      'fan_money' => '10',
+      'sell_price' => '115.42',
+      'name' => '秋冬竹炭棉加厚加绒打底裤',
+      'market_price' => '10.00',
+      'id' => '21',
+    ),
+    1 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042248639.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.36',
+      'name' => '加厚加绒褶皱高腰女裤子2014秋冬新款韩版显瘦修身保暖黑色小脚裤打底裤长裤靴裤',
+      'market_price' => '200.00',
+      'id' => '19',
+    ),
+    2 => 
+    array (
+      'img' => 'upload/2014/11/21/20141121052618531.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '198.00',
+      'name' => '2014秋冬新款潮女韩国代购女鞋欧美英伦风马丁靴真皮短靴粗跟平底',
+      'market_price' => '500.00',
+      'id' => '15',
+    ),
+    3 => 
+    array (
+      'img' => 'upload/2014/11/14/20141114092900136.jpg',
+      'sale' => '8',
+      'fan_money' => '125',
+      'sell_price' => '548.00',
+      'name' => '学院风女装2014秋装新款韩版皱褶收腰毛呢短裤  高腰显瘦阔腿裤潮',
+      'market_price' => '2000.00',
+      'id' => '5',
+    ),
+    4 => 
+    array (
+      'img' => 'upload/2014/11/11/20141111012534517.jpg',
+      'sale' => '1',
+      'fan_money' => '500',
+      'sell_price' => '4000.00',
+      'name' => '电器城【4G三网通现货，分期0首付】Apple/苹果 iPhone 6 4.7英寸',
+      'market_price' => '5000.00',
+      'id' => '2',
+    ),
+    5 => 
+    array (
+      'img' => 'upload/2014/11/13/20141113111229996.jpg',
+      'sale' => '1',
+      'fan_money' => '800',
+      'sell_price' => '5000.00',
+      'name' => 'iphone苹果',
+      'market_price' => '0.00',
+      'id' => '4',
+    ),
+    6 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042348406.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.00',
+      'name' => '秋冬新款加绒加厚英伦休闲格子裤子女修身显瘦铅笔小脚裤长裤',
+      'market_price' => '69.00',
+      'id' => '20',
+    ),
+    7 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035801192.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '115.42',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '100.00',
+      'id' => '18',
+    ),
+    8 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035243135.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '2055.00',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '1000.00',
+      'id' => '17',
+    ),
+  ),
+  'item' => 
+  array (
+    'img' => 'upload/2014/11/25/20141125035243135.jpg',
+    'sale' => '1',
+    'fan_money' => '100',
+    'sell_price' => '2055.00',
+    'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+    'market_price' => '1000.00',
+    'id' => '17',
+    'zhe' => 9.5,
+  ),
+  'key' => 8,
+  'site_config' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'seo_data' => 
+  array (
+    'title' => '集划算-集结小划算',
+    'keywords' => '集划算，最好的划算平台',
+    'description' => '集划算，最好的划算平台',
+  ),
+  'first' => 
+  array (
+    'id' => '9',
+    'name' => '综合商品',
+    'parent_id' => '0',
+    'sort' => '9',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '综合商品',
+    'descript' => '综合商品',
+    'title' => '综合商品',
+  ),
+  'second' => 
+  array (
+    'id' => '18',
+    'name' => '百分五',
+    'parent_id' => '2',
+    'sort' => '1',
+    'visibility' => '1',
+    'model_id' => '0',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'third' => 
+  array (
+    'id' => '23',
+    'name' => '聚潮流',
+    'parent_id' => '19',
+    'sort' => '2',
+    'visibility' => '1',
+    'model_id' => '0',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'tmpId' => '17',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:2
+errStr:Invalid argument supplied for foreach()
+errFile:D:\wamp\www\iwebshop\runtime\default\site\index.php
+errLine:218
+errTime:14-11-26 10:18:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\index.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_commend_goods as co',
+      'fields' => 'go.img,go.sale,go.fan_money,go.sell_price,go.name,go.market_price,go.id',
+      'where' => 'where co.commend_id = 1 and go.is_del = 0 AND go.id is not null',
+      'join' => 'left join li_goods  as go on co.goods_id = go.id',
+      'group' => 'GROUP BY id',
+      'having' => '',
+      'order' => 'order by go.sort asc,id desc',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042442362.jpg',
+      'sale' => '0',
+      'fan_money' => '10',
+      'sell_price' => '115.42',
+      'name' => '秋冬竹炭棉加厚加绒打底裤',
+      'market_price' => '10.00',
+      'id' => '21',
+    ),
+    1 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042248639.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.36',
+      'name' => '加厚加绒褶皱高腰女裤子2014秋冬新款韩版显瘦修身保暖黑色小脚裤打底裤长裤靴裤',
+      'market_price' => '200.00',
+      'id' => '19',
+    ),
+    2 => 
+    array (
+      'img' => 'upload/2014/11/21/20141121052618531.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '198.00',
+      'name' => '2014秋冬新款潮女韩国代购女鞋欧美英伦风马丁靴真皮短靴粗跟平底',
+      'market_price' => '500.00',
+      'id' => '15',
+    ),
+    3 => 
+    array (
+      'img' => 'upload/2014/11/14/20141114092900136.jpg',
+      'sale' => '8',
+      'fan_money' => '125',
+      'sell_price' => '548.00',
+      'name' => '学院风女装2014秋装新款韩版皱褶收腰毛呢短裤  高腰显瘦阔腿裤潮',
+      'market_price' => '2000.00',
+      'id' => '5',
+    ),
+    4 => 
+    array (
+      'img' => 'upload/2014/11/11/20141111012534517.jpg',
+      'sale' => '1',
+      'fan_money' => '500',
+      'sell_price' => '4000.00',
+      'name' => '电器城【4G三网通现货，分期0首付】Apple/苹果 iPhone 6 4.7英寸',
+      'market_price' => '5000.00',
+      'id' => '2',
+    ),
+    5 => 
+    array (
+      'img' => 'upload/2014/11/13/20141113111229996.jpg',
+      'sale' => '1',
+      'fan_money' => '800',
+      'sell_price' => '5000.00',
+      'name' => 'iphone苹果',
+      'market_price' => '0.00',
+      'id' => '4',
+    ),
+    6 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042348406.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.00',
+      'name' => '秋冬新款加绒加厚英伦休闲格子裤子女修身显瘦铅笔小脚裤长裤',
+      'market_price' => '69.00',
+      'id' => '20',
+    ),
+    7 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035801192.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '115.42',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '100.00',
+      'id' => '18',
+    ),
+    8 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035243135.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '2055.00',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '1000.00',
+      'id' => '17',
+    ),
+  ),
+  'item' => 
+  array (
+    'img' => 'upload/2014/11/25/20141125035243135.jpg',
+    'sale' => '1',
+    'fan_money' => '100',
+    'sell_price' => '2055.00',
+    'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+    'market_price' => '1000.00',
+    'id' => '17',
+    'zhe' => 9.5,
+  ),
+  'key' => 8,
+  'site_config' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'seo_data' => 
+  array (
+    'title' => '集划算-集结小划算',
+    'keywords' => '集划算，最好的划算平台',
+    'description' => '集划算，最好的划算平台',
+  ),
+  'first' => 
+  array (
+    'id' => '9',
+    'name' => '综合商品',
+    'parent_id' => '0',
+    'sort' => '9',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '综合商品',
+    'descript' => '综合商品',
+    'title' => '综合商品',
+  ),
+  'second' => 
+  array (
+    'id' => '27',
+    'name' => '手机',
+    'parent_id' => '6',
+    'sort' => '0',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'third' => 
+  array (
+    'id' => '23',
+    'name' => '聚潮流',
+    'parent_id' => '19',
+    'sort' => '2',
+    'visibility' => '1',
+    'model_id' => '0',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'tmpId' => '17',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:2
+errStr:Invalid argument supplied for foreach()
+errFile:D:\wamp\www\iwebshop\runtime\default\site\index.php
+errLine:218
+errTime:14-11-26 10:18:55
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\index.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_commend_goods as co',
+      'fields' => 'go.img,go.sale,go.fan_money,go.sell_price,go.name,go.market_price,go.id',
+      'where' => 'where co.commend_id = 1 and go.is_del = 0 AND go.id is not null',
+      'join' => 'left join li_goods  as go on co.goods_id = go.id',
+      'group' => 'GROUP BY id',
+      'having' => '',
+      'order' => 'order by go.sort asc,id desc',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042442362.jpg',
+      'sale' => '0',
+      'fan_money' => '10',
+      'sell_price' => '115.42',
+      'name' => '秋冬竹炭棉加厚加绒打底裤',
+      'market_price' => '10.00',
+      'id' => '21',
+    ),
+    1 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042248639.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.36',
+      'name' => '加厚加绒褶皱高腰女裤子2014秋冬新款韩版显瘦修身保暖黑色小脚裤打底裤长裤靴裤',
+      'market_price' => '200.00',
+      'id' => '19',
+    ),
+    2 => 
+    array (
+      'img' => 'upload/2014/11/21/20141121052618531.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '198.00',
+      'name' => '2014秋冬新款潮女韩国代购女鞋欧美英伦风马丁靴真皮短靴粗跟平底',
+      'market_price' => '500.00',
+      'id' => '15',
+    ),
+    3 => 
+    array (
+      'img' => 'upload/2014/11/14/20141114092900136.jpg',
+      'sale' => '8',
+      'fan_money' => '125',
+      'sell_price' => '548.00',
+      'name' => '学院风女装2014秋装新款韩版皱褶收腰毛呢短裤  高腰显瘦阔腿裤潮',
+      'market_price' => '2000.00',
+      'id' => '5',
+    ),
+    4 => 
+    array (
+      'img' => 'upload/2014/11/11/20141111012534517.jpg',
+      'sale' => '1',
+      'fan_money' => '500',
+      'sell_price' => '4000.00',
+      'name' => '电器城【4G三网通现货，分期0首付】Apple/苹果 iPhone 6 4.7英寸',
+      'market_price' => '5000.00',
+      'id' => '2',
+    ),
+    5 => 
+    array (
+      'img' => 'upload/2014/11/13/20141113111229996.jpg',
+      'sale' => '1',
+      'fan_money' => '800',
+      'sell_price' => '5000.00',
+      'name' => 'iphone苹果',
+      'market_price' => '0.00',
+      'id' => '4',
+    ),
+    6 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042348406.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.00',
+      'name' => '秋冬新款加绒加厚英伦休闲格子裤子女修身显瘦铅笔小脚裤长裤',
+      'market_price' => '69.00',
+      'id' => '20',
+    ),
+    7 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035801192.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '115.42',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '100.00',
+      'id' => '18',
+    ),
+    8 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035243135.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '2055.00',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '1000.00',
+      'id' => '17',
+    ),
+  ),
+  'item' => 
+  array (
+    'img' => 'upload/2014/11/25/20141125035243135.jpg',
+    'sale' => '1',
+    'fan_money' => '100',
+    'sell_price' => '2055.00',
+    'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+    'market_price' => '1000.00',
+    'id' => '17',
+    'zhe' => 9.5,
+  ),
+  'key' => 8,
+  'site_config' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'seo_data' => 
+  array (
+    'title' => '集划算-集结小划算',
+    'keywords' => '集划算，最好的划算平台',
+    'description' => '集划算，最好的划算平台',
+  ),
+  'first' => 
+  array (
+    'id' => '9',
+    'name' => '综合商品',
+    'parent_id' => '0',
+    'sort' => '9',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '综合商品',
+    'descript' => '综合商品',
+    'title' => '综合商品',
+  ),
+  'second' => 
+  array (
+    'id' => '27',
+    'name' => '手机',
+    'parent_id' => '6',
+    'sort' => '0',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'third' => 
+  array (
+    'id' => '23',
+    'name' => '聚潮流',
+    'parent_id' => '19',
+    'sort' => '2',
+    'visibility' => '1',
+    'model_id' => '0',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'tmpId' => '17',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+Mess: SELECT img,sale,seller_id,fan_money,sell_price,name,li_goods.id FROM li_goods   WHERE is_del=0 and c.category_id = 1 ORDER BY sale DESC limit 50000
+ -- Unknown column 'c.category_id' in 'where clause'
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:199  	File:IWEB_PATH/web\model\model_class.php
+	Func:query1         	Class:IModel         	Type:->   	Line:59   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:getHotCloth    	Class:Site           	Type:->   	Line:51   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:12
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:12
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:12
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:12
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:12
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:13
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:13
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:13
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:13
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 10:31:13
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:2
+errStr:Invalid argument supplied for foreach()
+errFile:D:\wamp\www\iwebshop\runtime\default\site\index.php
+errLine:293
+errTime:14-11-26 10:49:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\index.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_commend_goods as co',
+      'fields' => 'go.img,go.sale,go.fan_money,go.sell_price,go.name,go.market_price,go.id',
+      'where' => 'where co.commend_id = 1 and go.is_del = 0 AND go.id is not null',
+      'join' => 'left join li_goods  as go on co.goods_id = go.id',
+      'group' => 'GROUP BY id',
+      'having' => '',
+      'order' => 'order by go.sort asc,id desc',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042442362.jpg',
+      'sale' => '0',
+      'fan_money' => '10',
+      'sell_price' => '115.42',
+      'name' => '秋冬竹炭棉加厚加绒打底裤',
+      'market_price' => '10.00',
+      'id' => '21',
+    ),
+    1 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042248639.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.36',
+      'name' => '加厚加绒褶皱高腰女裤子2014秋冬新款韩版显瘦修身保暖黑色小脚裤打底裤长裤靴裤',
+      'market_price' => '200.00',
+      'id' => '19',
+    ),
+    2 => 
+    array (
+      'img' => 'upload/2014/11/21/20141121052618531.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '198.00',
+      'name' => '2014秋冬新款潮女韩国代购女鞋欧美英伦风马丁靴真皮短靴粗跟平底',
+      'market_price' => '500.00',
+      'id' => '15',
+    ),
+    3 => 
+    array (
+      'img' => 'upload/2014/11/14/20141114092900136.jpg',
+      'sale' => '8',
+      'fan_money' => '125',
+      'sell_price' => '548.00',
+      'name' => '学院风女装2014秋装新款韩版皱褶收腰毛呢短裤  高腰显瘦阔腿裤潮',
+      'market_price' => '2000.00',
+      'id' => '5',
+    ),
+    4 => 
+    array (
+      'img' => 'upload/2014/11/11/20141111012534517.jpg',
+      'sale' => '1',
+      'fan_money' => '500',
+      'sell_price' => '4000.00',
+      'name' => '电器城【4G三网通现货，分期0首付】Apple/苹果 iPhone 6 4.7英寸',
+      'market_price' => '5000.00',
+      'id' => '2',
+    ),
+    5 => 
+    array (
+      'img' => 'upload/2014/11/13/20141113111229996.jpg',
+      'sale' => '1',
+      'fan_money' => '800',
+      'sell_price' => '5000.00',
+      'name' => 'iphone苹果',
+      'market_price' => '0.00',
+      'id' => '4',
+    ),
+    6 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125042348406.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '69.00',
+      'name' => '秋冬新款加绒加厚英伦休闲格子裤子女修身显瘦铅笔小脚裤长裤',
+      'market_price' => '69.00',
+      'id' => '20',
+    ),
+    7 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035801192.jpg',
+      'sale' => '0',
+      'fan_money' => '20',
+      'sell_price' => '115.42',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '100.00',
+      'id' => '18',
+    ),
+    8 => 
+    array (
+      'img' => 'upload/2014/11/25/20141125035243135.jpg',
+      'sale' => '1',
+      'fan_money' => '100',
+      'sell_price' => '2055.00',
+      'name' => '六纪美衣 【韩国潮货加厚款】2014秋冬新款韩系时尚名媛百搭纯色毛衣连衣裙子',
+      'market_price' => '1000.00',
+      'id' => '17',
+    ),
+  ),
+  'item' => 
+  array (
+    'img' => 'upload/2014/11/21/20141121052618531.jpg',
+    'sale' => '1',
+    'seller_id' => '3',
+    'fan_money' => '100',
+    'sell_price' => '198.00',
+    'name' => '2014秋冬新款潮女韩国代购女鞋欧美英伦风马丁靴真皮短靴粗跟平底',
+    'market_price' => '500.00',
+    'id' => '15',
+    'seller_name' => '谷拓小店',
+    'count' => 4,
+    'sumsale' => '11',
+  ),
+  'key' => 2,
+  'site_config' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'seo_data' => 
+  array (
+    'title' => '集划算-集结小划算',
+    'keywords' => '集划算，最好的划算平台',
+    'description' => '集划算，最好的划算平台',
+  ),
+  'first' => 
+  array (
+    'id' => '9',
+    'name' => '综合商品',
+    'parent_id' => '0',
+    'sort' => '9',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '综合商品',
+    'descript' => '综合商品',
+    'title' => '综合商品',
+  ),
+  'second' => 
+  array (
+    'id' => '27',
+    'name' => '手机',
+    'parent_id' => '6',
+    'sort' => '0',
+    'visibility' => '1',
+    'model_id' => '2',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'third' => 
+  array (
+    'id' => '23',
+    'name' => '聚潮流',
+    'parent_id' => '19',
+    'sort' => '2',
+    'visibility' => '1',
+    'model_id' => '0',
+    'keywords' => '',
+    'descript' => '',
+    'title' => '',
+  ),
+  'tmpId' => '17',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: select  DISTINCT go.img,go.sell_price,go.name,go.id,go.market_price,go.description from li_category_extend as ca left join li_goods  as go on ca.goods_id = go.id left join li_commend_goods  as co on co.goods_id = go.id where ca.category_id in () and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limit 9
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and co.commend_id = 4 and go.is_del = 0   order by go.sort asc,go.id desc limi' at line 1
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:141  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:277  	File:D:\wamp\www\iwebshop\runtime\default\site\index.php
+	Func:require        	Class:               	Type:     	Line:115  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:216  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:36   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:385  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:66   	File:D:\wamp\www\iwebshop\controllers\site.php
+	Func:index          	Class:Site           	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 13:19:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 13:19:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 13:19:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 13:19:53
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 13:19:53
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: sellerRow
+errFile:D:\wamp\www\iwebshop\runtime\default\site\home.php
+errLine:106
+errTime:14-11-26 13:19:53
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/iwebshop/runtime/default/site\\home.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851080628&site=qq&menu=yes" target="_blank" data-before="transition"><img src="../views/default/skin/default/images/front/qq.png"/>  在线客服</a> 
+  </p> <br> <p class=\'pend\'>Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼   <br> <a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a> &nbsp; &nbsp; &nbsp;<a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=905537">站长统计</a> &nbsp;&nbsp;&nbsp; 友情链接: <a href="http://ju.taobao.com/">聚划算</a> <span></span> </p> <div class=\'pimg\'><img src="../views/default/skin/default/images/front/nanning_police.png"/>
+	<img src="../views/default/skin/default/images/front/cnnic.png"/> </div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/iwebshop/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_seller',
+      'fields' => '*',
+      'where' => 'where id = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+  ),
+  'item' => 
+  array (
+    'order' => '9',
+    'name' => '新闻公告',
+    'link' => 'http://localhost/iwebshop/site/article',
+  ),
+  'key' => 9,
+  'seller_id' => 0,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+Mess: SELECT * FROM li_right WHERE id = favicon.ico limit 1
+ -- Unknown column 'favicon.ico' in 'where clause'
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:193  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:140  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:821  	File:D:\wamp\www\iwebshop\controllers\system.php
+	Func:right_edit     	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>
+<ERROR_INFO>
+Mess: SELECT * FROM li_right WHERE id = favicon.ico limit 1
+ -- Unknown column 'favicon.ico' in 'where clause'
+Line: 99
+File: IWEB_PATH/db\driver\mysqli_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysqli        	Type:->   	Line:67   	File:IWEB_PATH/db\driver\mysqli_class.php
+	Func:doSql          	Class:IMysqli        	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:193  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:140  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:821  	File:D:\wamp\www\iwebshop\controllers\system.php
+	Func:right_edit     	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:153  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:101  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:D:\wamp\www\iwebshop\index.php
+</ERROR_INFO>

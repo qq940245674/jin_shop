@@ -1,0 +1,216 @@
+{set:$seller_id = $this->seller['seller_id']}
+
+<article class="module width_full">
+	<header>
+		<h3 class="tabs_involved">订单查看</h3>
+
+		<ul class="tabs" name="menu1">
+			<li id="li_1" class="active"><a href="javascript:select_tab('1');">基本信息</a></li>
+			<li id="li_2"><a href="javascript:select_tab('2');">发货记录</a></li>
+			<li id="li_3"><a href="javascript:select_tab('3');">淘宝订单号</a></li>
+		</ul>
+	</header>
+
+	<div class="module_content" id="tab-1">
+		<fieldset>
+			<table class="tablesorter clear">
+				<colgroup>
+					<col width="550px" />
+					<col width="100px" />
+					<col width="100px" />
+					<col />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th>商品名称</th>
+						<th>商品价格</th>
+						<th>商品数量</th>
+						<th>小计</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{set:$goodsSum = 0;$orderWeight = 0}
+					{query:name=order_goods as og join=left join goods as go on go.id eq og.goods_id where=order_id eq $order_id and go.seller_id eq $seller_id fields=og.*}
+					{set:$goodsSum    += $item['goods_price'] * $item['goods_nums']}
+					{set:$orderWeight += $item['goods_weight']* $item['goods_nums']}
+					<tr>
+						<td>
+							{set:$goodsRow = JSON::decode($item['goods_array'])}
+							{$goodsRow['name']} &nbsp;&nbsp; {$goodsRow['value']}
+						</td>
+						<td>{$item['goods_price']}</td>
+						<td>{$item['goods_nums']}</td>
+						<td>{echo:$item['goods_price']*$item['goods_nums']}</td>
+					</tr>
+					{/query}
+				</tbody>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			{set:$orderCount = CountSum::countOrderFee($goodsSum,$goodsSum,$orderWeight,$province,$distribution,0,false,$if_insured,$invoice)}
+
+			<table class="tablesorter clear">
+				<colgroup>
+					<col width="120px" />
+					<col />
+				</colgroup>
+
+				<thead>
+					<tr><th colspan="2">订单金额明细</th></tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>商品总额:</th><td>￥{$goodsSum}</td>
+					</tr>
+					<tr>
+						<th>配送费用:</th><td>￥{$orderCount['deliveryPrice']}</td>
+					</tr>
+					<tr>
+						<th>保价费用:</th><td>￥{$orderCount['insuredPrice']}</td>
+					</tr>
+					<tr>
+						<th>税金:</th><td>￥{$orderCount['taxPrice']}</td>
+					</tr>
+					<tr>
+						<th>订单总额:</th><td>￥{$orderCount['orderAmountPrice']}</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<table class="tablesorter clear">
+				<colgroup>
+					<col width="120px" />
+					<col />
+				</colgroup>
+
+				<thead>
+					<tr><th colspan="2">订单其他信息</th></tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>配送方式:</th><td>{$delivery}</td>
+					</tr>
+					<tr>
+						<th>配送保价:</th><td>{if:$if_insured==0}不保价{else:}保价{/if}</td>
+					</tr>
+					<tr>
+						<th>商品重量:</th><td>{$orderWeight} g</td>
+					</tr>
+					<tr>
+						<th>支付方式:</th><td>{$payment}</td>
+					</tr>
+					<tr>
+						<th>是否开票:</th><td>{if:$invoice==0}否{else:}是{/if}</td>
+					</tr>
+					<tr>
+						<th>发票抬头:</th><td>{$invoice_title}</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<table class="tablesorter clear">
+				<colgroup>
+					<col width="120px" />
+					<col />
+				</colgroup>
+
+				<thead>
+					<tr><th colspan="2">收货人信息</th></tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>发货日期:</th><td>{$send_time}</td>
+					</tr>
+					<tr>
+						<th>姓名:</th><td>{$accept_name}</td>
+					</tr>
+					<tr>
+						<th>电话:</th><td>{$telphone}</td>
+					</tr>
+					<tr>
+						<th>手机 :</th><td>{$mobile}</td>
+					</tr>
+					<tr>
+						<th>地区:</th><td>{$area_addr}</td>
+					</tr>
+					<tr>
+						<th>地址:</th><td>{$address}</td>
+					</tr>
+					<tr>
+						<th>邮编:</th><td>{$postcode}</td>
+					</tr>
+					<tr>
+						<th>送货时间:</th><td>{$accept_time}</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</div>
+
+	<div class="module_content" id="tab-2">
+		<fieldset>
+			<table class="tablesorter clear">
+				<colgroup>
+					<col width="200px" />
+					<col />
+				</colgroup>
+
+				<thead>
+					<tr><th colspan="2">发货单据列表</th></tr>
+				</thead>
+
+				<tbody>
+					{query: name=delivery_doc as c join=left join delivery as p on c.delivery_type eq p.id fields=c.*,p.name as pname where=c.order_id eq $order_id and c.seller_id eq $seller_id items=$deliveryData}{/query}
+					{if:$deliveryData}
+					<tr><th>配送时间：</th><td>{$item['time']}</td></tr>
+					<tr><th>配送方式：</th><td>{$item['pname']}</td></tr>
+					<tr><th>物流单号：</th><td>{$item['delivery_code']}</td></tr>
+					<tr><th>收件人：</th><td>{$item['name']}</td></tr>
+					<tr><th>备注：</th><td>{$item['note']}</td></tr>
+					{else:}
+					<tr><td colspan="2">暂无数据</td></tr>
+					{/if}
+				</tbody>
+			</table>
+		</fieldset>
+	</div>
+
+	<div class="module_content" id="tab-3">
+		<fieldset>
+			<label>淘宝订单号</label>
+			<div class="box">
+				{$postscript}
+			</div>
+		</fieldset>
+	</div>
+</article>
+
+<script type='text/javascript'>
+
+var pay_status = '{$pay_status}';
+
+//DOM加载完毕后运行
+$(function()
+{
+	select_tab(1);
+});
+
+//选择当前Tab
+function select_tab(curr_tab)
+{
+	$("div.module_content").hide();
+	$("#tab-"+curr_tab).show();
+	$("ul[name=menu1] > li").removeClass('active');
+	$('#li_'+curr_tab).addClass('active');
+}
+</script>

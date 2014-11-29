@@ -1,0 +1,68 @@
+{set:$countData = statistics::sellerAmount($this->seller['seller_id']);}
+{js:chart}
+
+<article class="module width_full">
+	<header><h3>概要信息</h3></header>
+	<div class="module_content">
+		<table class="tablesorter" cellspacing="0">
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td>商品总数量：<a href="{url:/seller/goods_list}">{echo:statistics::goodsCount($this->seller['seller_id'])} 件</a></td>
+					<td>待回复咨询：<a href="{url:/seller/refer_list}">{echo:statistics::referWaitCount($this->seller['seller_id'])} 条</a></td>
+					<td>商品评论数：<a href="{url:/seller/comment_list}">{echo:statistics::commentCount($this->seller['seller_id'])} 条</a></td>
+					<td>总销售量：{echo:statistics::sellCountSeller($this->seller['seller_id'])} 件</td>
+					<td>信用评分：{echo:statistics::gradeSeller($this->seller['seller_id'])} 分</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</article>
+
+<article class="module width_full">
+	<header><h3>销售统计</h3></header>
+	<div class="module_content">
+		<div id="myChart" style="width:100%;min-height:320px;"></div>
+	</div>
+</article>
+
+<script type='text/javascript'>
+//图表生成
+$(function()
+{
+	//图标模板
+	userHighChart = $('#myChart').highcharts(
+	{
+		title:
+		{
+			text:'销售统计'
+		},
+		xAxis:
+		{
+			title:
+			{
+				text:'时间'
+			},
+			categories:{echo:JSON::encode(array_keys($countData))},
+		},
+		yAxis:
+		{
+			title:
+			{
+				text:'销售额(元)'
+			},
+		},
+		series:
+		[
+			{
+				name:'销售额',
+				data:{echo:JSON::encode(array_values($countData))}
+			}
+		],
+		tooltip:
+		{
+			valueSuffix:'元'
+		}
+	});
+})
+</script>

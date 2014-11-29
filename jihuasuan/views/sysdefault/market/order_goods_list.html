@@ -1,0 +1,123 @@
+{js:my97date}
+{set:$search = IReq::get('search') ? IFilter::act(IReq::get('search'),'string') : array();}
+
+<div class="headbar">
+	<div class="position"><span>统计</span><span>></span><span>商户数据统计</span><span>></span><span>货款明细</span></div>
+	<div class="operating">
+		<div class="search f_l">
+			<form name="searchOrderGoods" action="{url:/}" method="get">
+				<input type='hidden' name='controller' value='market' />
+				<input type='hidden' name='action' value='order_goods_list' />
+				从 <input type="text" name='search[o.create_time>=]' value='' class="Wdate" pattern='date' alt='' onFocus="WdatePicker()" empty /> 到 <input type="text" name='search[o.create_time<=]' value='' empty pattern='date' class="Wdate" onFocus="WdatePicker()" />
+
+				<select class="auto" name="search[og.is_checkout=]">
+					<option value="" selected="selected">结算状态</option>
+					<option value="0">未结算</option>
+					<option value="1">已结算</option>
+				</select>
+				<button class="btn" type="submit"><span class="sch">搜 索</span></button>
+			</form>
+		</div>
+	</div>
+
+	<div class="field">
+		<table class="list_table">
+			<colgroup>
+				<col width="165px" />
+				<col width="325px" />
+				<col width="100px" />
+				<col width="120px" />
+				<col width="80px" />
+				<col width="85px" />
+				<col width="70px" />
+				<col />
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>订单号</th>
+					<th>商品信息</th>
+					<th>商户</th>
+					<th>计费</th>
+					<th>总计</th>
+					<th>下单时间</th>
+					<th>结算状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<div class="content">
+	<table class="list_table">
+		<colgroup>
+			<col width="165px" />
+			<col width="325px" />
+			<col width="100px" />
+			<col width="120px" />
+			<col width="80px" />
+			<col width="85px" />
+			<col width="70px" />
+			<col />
+		</colgroup>
+
+		<tbody>
+			{set:$where = ''}
+			{foreach:items=$search}
+				{if:$item !== ""}{set:$where .= " and ".$key."'".$item."'"}{/if}
+			{/foreach}
+
+			{set:
+				$page = (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;
+				$orderGoodsQuery = CountSum::getSellerGoodsFeeQuery();
+				$orderGoodsQuery->page = $page;
+				$orderGoodsQuery->where = $orderGoodsQuery->getWhere().$where;
+			}
+
+			{foreach:items = $orderGoodsQuery->find()}
+			{set:$goodsSum    = $item['goods_price'] * $item['goods_nums']}
+			{set:$orderWeight = $item['goods_weight']* $item['goods_nums']}
+			{set:$orderCount = CountSum::countOrderFee($goodsSum,$goodsSum,$orderWeight,$item['province'],$item['distribution'],0,false,$item['if_insured'],$item['invoice'])}
+			<tr>
+				<td title="{$item['order_no']}">{$item['order_no']}</td>
+				<td>
+					<img src='{webroot:$item[img]}' class="ico" />
+					{set:$goodsRow = JSON::decode($item['goods_array'])}
+					{$goodsRow['name']} &nbsp;&nbsp; {$goodsRow['value']}
+					<label class="orange bold">X {$item['goods_nums']} 件</label>
+				</td>
+				<td>{$item['seller_name']}</td>
+				<td>
+					<p>货款：￥{$goodsSum}</p>
+					<p>运费：￥{$orderCount['deliveryPrice']}</p>
+					<p>保价：￥{$orderCount['insuredPrice']}</p>
+					<p>税金：￥{$orderCount['taxPrice']}</p>
+				</td>
+				<td title="{$orderCount['orderAmountPrice']}">￥{$orderCount['orderAmountPrice']}</td>
+				<td title="{$item['create_time']}">{$item['create_time']}</td>
+				<td>
+					{if:$item['is_checkout'] == 1}
+					<label class="green">已结算</label>
+					{else:}
+					<label class="orange">未结算</label>
+					{/if}
+				</td>
+				<td>
+					<a href="{url:/order/order_show/id/$item[order_id]}">
+						<img class="operator" src="{skin:images/admin/icon_check.gif}" alt="查看" title="查看" />
+					</a>
+				</td>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+</div>
+{$orderGoodsQuery->getPageBar()}
+
+<script type="text/javascript">
+//表单回填
+var formObj = new Form('searchOrderGoods');
+{foreach:items=$search}
+formObj.setValue("search[{$key}]","{$item}");
+{/foreach}
+</script>

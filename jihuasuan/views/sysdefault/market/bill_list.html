@@ -1,0 +1,116 @@
+{js:my97date}
+{set:$search = IReq::get('search') ? IFilter::act(IReq::get('search'),'string') : array();}
+
+<div class="headbar">
+	<div class="position"><span>统计</span><span>></span><span>商户数据统计</span><span>></span><span>货款结算列表</span></div>
+	<div class="operating">
+		<div class="search f_l">
+			<form name="searchBill" action="{url:/}" method="get">
+				<input type='hidden' name='controller' value='market' />
+				<input type='hidden' name='action' value='bill_list' />
+
+				<span>
+					申请时间
+					<input type="text" name='search[apply_time>=]' value='' class="Wdate" pattern='date' onFocus="WdatePicker()" empty title='选择起始时间' /> 到
+					<input type="text" name='search[apply_time<=]' value='' class="Wdate" pattern='date' onFocus="WdatePicker()" empty title='选择终止时间' />
+				</span>
+
+				<select class="auto" name="search[is_pay=]">
+					<option value="" selected="selected">结算状态</option>
+					<option value="0">未结算</option>
+					<option value="1">已结算</option>
+				</select>
+
+				<button class="btn" type="submit"><span class="sch">搜 索</span></button>
+			</form>
+		</div>
+	</div>
+
+	<div class="field">
+		<table class="list_table">
+			<colgroup>
+				<col width="180px" />
+				<col width="90px" />
+				<col width="155px" />
+				<col width="80px" />
+				<col width="155px" />
+				<col />
+				<col width="100px" />
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>订单的结算起止</th>
+					<th>申请商户</th>
+					<th>申请时间</th>
+					<th>结算状态</th>
+					<th>结算时间</th>
+					<th>管理员回复</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+
+<div class="content">
+	<table class="list_table">
+		<colgroup>
+			<col width="180px" />
+			<col width="90px" />
+			<col width="155px" />
+			<col width="80px" />
+			<col width="155px" />
+			<col />
+			<col width="100px" />
+		</colgroup>
+
+		<tbody>
+			{set:$where = 1}
+			{foreach:items=$search}
+			{if:$item !== ""}{set:$where .= " and ".$key."'".$item."'"}{/if}
+			{/foreach}
+			{set:$page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;}
+			{query: name=bill as b join=left join seller as s on s.id eq b.seller_id left join admin as a on b.admin_id eq a.id where=$where page=$page fields=b.*,s.seller_name,a.admin_name}
+			<tr>
+				<td>{$item['start_time']} ~ {$item['end_time']}</td>
+				<td>{$item['seller_name']}</td>
+				<td>{$item['apply_time']}</td>
+				<td>
+					{if:$item['is_pay'] == 1}
+					<label class="green">已结算</label>
+					{else:}
+					<label class="orange">未结算</label>
+					{/if}
+				</td>
+				<td>{$item['pay_time']}</td>
+				<td>
+					{if:$item['pay_content']}
+						{$item['admin_name']}：{$item['pay_content']}
+					{/if}
+				</td>
+				<td>
+					<a href="{url:/market/bill_edit/id/$item[id]}">
+						<img class="operator" title="回复" alt="回复" src="{skin:images/admin/icon_check.gif}" />
+					</a>
+
+					{if:$item['is_pay'] == 0}
+					<a href="javascript:delModel({link:'{url:/market/bill_del/id/$item[id]}'})">
+						<img class="operator" src="{skin:images/admin/icon_del.gif}" title="删除" />
+					</a>
+					{/if}
+				</td>
+			</tr>
+			{/query}
+		</tbody>
+	</table>
+</div>
+{$query->getPageBar()}
+
+<script type="text/javascript">
+//表单回填
+var formObj = new Form('searchBill');
+{foreach:items=$search}
+formObj.setValue("search[{$key}]","{$item}");
+{/foreach}
+</script>

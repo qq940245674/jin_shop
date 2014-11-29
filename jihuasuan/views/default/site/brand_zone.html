@@ -1,0 +1,83 @@
+{set:$brandId = IFilter::act(IReq::get('id'),'int')}
+{query:name=brand where=id eq $brandId item=$brandRow}{/query}
+
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}"> 首页</a> » 商品品牌 </div>
+<div class="wrapper clearfix container_2">
+	<div class="sidebar f_l">
+		
+
+		<div class="box m_10">
+			<div class="title">更多品牌</div>
+				<div class="cont clearfix" style='clear:both;'>
+				<ul style='margin-left:50px;margin-top:10px;'>
+					{query:name=brand fields=id,name,logo order=sort asc limit=20}
+					{set:$tmpId=$item['id'];}
+					<li style='width:220px;float:left;margin-top:10px;'><a href="{url:/site/brand_zone/id/$tmpId}"><img src="{webroot:$item[logo]}"  width="190" height="90"/></a></li>
+					{/query}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="main f_r">
+		<div class="box m_10" style="width:998px;">
+			<div class="title">品牌专区</div>
+			<div class="cont">
+				<div class="c_box">
+					<dl class="clearfix">
+						<dt><img src="{webroot:$brandRow[logo]}" width="220" height="100" /></dt>
+						<dd><strong>{$brandRow['name']}</strong></dd>
+						<dd>官方站点：{$brandRow['url']}</dd>
+					</dl>
+					<p>{$brandRow['description']}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="display_title">
+			<ul>
+				{foreach:items=search_goods::getOrderType()}
+				{set:$next = search_goods::getOrderValue($key)}
+				<li class="{echo:search_goods::isOrderCurrent($key) ? 'current':''}">
+					<a href="{echo:search_goods::searchUrl('order',$next)}">{$item}<span class="{echo:search_goods::isOrderDesc() ? 'desc':''}">&nbsp;</span></a>
+				</li>
+				{/foreach}
+			</ul>
+			
+			<span class="f_l">显示方式：</span>
+			<a class="show_b" href="{echo:search_goods::searchUrl('show_type','win')}" title='橱窗展示' alt='橱窗展示'><span class='{echo:search_goods::getListShow(IReq::get('show_type')) == 'win' ? 'current':''}'></span></a>
+			
+		</div>
+		{set:$goodsObj = search_goods::find(' go.brand_id = '.$brandId);$resultData = $goodsObj->find();}
+		{if:$resultData}
+		{set:$listSize = search_goods::getListSize(IFilter::act(IReq::get('show_type')))}
+		<ul class="display_list clearfix m_10">	
+			{foreach:items=$resultData}
+				<?php 
+					if($item['fan_money'] != 0){
+						$item['zhe'] = number_format(($item['sell_price']-$item['fan_money'])/$item['sell_price'],2)*10;	
+					}
+				?>
+			<li class="clearfix {echo:search_goods::getListShow(IFilter::act(IReq::get('show_type')))}">
+				<a title="{$item['name']}" class="p_name" href="{url:/site/products/id/$item[id]}">{$item['name']}</a>
+				<div class="pic">
+					<a title="{$item['name']}" href="{url:/site/products/id/$item[id]}"><img src="{webroot:}{echo:Thumb::get($item['img'],280,280)}" width="280" height="280" alt="{$item['name']}" title="{$item['name']}" /></a>
+				</div>
+				<div class="price"><span>￥{$item['sell_price']}</span> &nbsp;返利￥{$item['fan_money']} <p>销量: {$item['sale']}</p><br>
+					<p style='float:left;margin-top:10px;margin-left:5px;'>剩余:{$item['store_nums']}</p>
+					<?php if($item['zhe']){?><p style='float:left;margin-top:10px;margin-left:15px;color:#FF4400;font-size:12px;'>{$item['zhe']} 折</p><?php }else{}?>
+					<a title="{$item['name']}" class='newa' href="{url:/site/products/id/$item[id]}" style='float:right;'>我要抢购</a>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		{$goodsObj->getPageBar()}
+
+		{else:}
+		<p class="display_list mt_10" style='margin-top:50px;margin-bottom:50px'>
+			<strong class="gray f14">对不起，没有找到相关商品</strong>
+		</p>
+		{/if}
+	</div>
+</div>

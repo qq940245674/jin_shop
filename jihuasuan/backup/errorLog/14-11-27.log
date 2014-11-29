@@ -1,0 +1,1787 @@
+<ERROR_INFO>
+errID:8
+errStr:Undefined index: _goods_category
+errFile:D:\wamp\www\iwebshop\controllers\seller.php
+errLine:113
+errTime:14-11-27 12:04:12
+##出错时变量的值：##
+array (
+  'id' => 0,
+  'callback' => '/seller/goods_list',
+  'Seller' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_seller',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'cash' => '350.00',
+  'store' => 1,
+  'sell' => 1,
+  'sumprice' => 1,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined index: _goods_category
+errFile:D:\wamp\www\iwebshop\controllers\seller.php
+errLine:114
+errTime:14-11-27 12:06:21
+##出错时变量的值：##
+array (
+  'id' => 0,
+  'callback' => '/seller/goods_list',
+  'Seller' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_seller',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'cash' => '350.00',
+  'store' => 1,
+  'sell' => 1,
+  'sumprice' => 1,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined index: tmp_name
+errFile:IWEB_PATH/core\util\upload_class.php
+errLine:309
+errTime:14-11-27 13:47:09
+##出错时变量的值：##
+array (
+  'info' => 
+  array (
+  ),
+  'field' => 'Filedata',
+  'file' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\php7E6.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'fileInfo' => 
+  array (
+    0 => 
+    array (
+      'name' => '20141127014709227.jpg',
+      'dir' => 'upload/2014/11/27/',
+      'size' => 78371,
+      'ininame' => 'pinganone.jpg',
+      'ext' => 'jpg',
+      'fileSrc' => 'upload/2014/11/27/20141127014709227.jpg',
+      'flag' => 1,
+    ),
+  ),
+  'fileext' => 'jpg',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:2
+errStr:Invalid argument supplied for foreach()
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:237
+errTime:14-11-27 14:00:06
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 'Filedata',
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\phpE40B.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\phpE40B.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => '图片规格必须是400 x 400 或 800 x 800',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Use of undefined constant JSON_UNESCAPED_UNICODE - assumed 'JSON_UNESCAPED_UNICODE'
+errFile:IWEB_PATH/core\util\upload_class.php
+errLine:260
+errTime:14-11-27 14:05:42
+##出错时变量的值：##
+array (
+  'info' => 
+  array (
+  ),
+  'field' => 'Filedata',
+  'file' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\php23B.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'fileInfo' => 
+  array (
+    0 => 
+    array (
+      'name' => 'pinganone.jpg',
+    ),
+  ),
+  'size' => 
+  array (
+    0 => 240,
+    1 => 150,
+    2 => 2,
+    3 => 'width="240" height="150"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'str' => '图片规格必须是400 x 400 或 800 x 800',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: field
+errFile:D:\wamp\www\iwebshop\controllers\seller.php
+errLine:27
+errTime:14-11-27 14:21:25
+##出错时变量的值：##
+array (
+  'config' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/iwebshop/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a>               <a href=\\"http://wpa.qq.com/msgrd?v=3&amp;uin=2851080628&amp;site=qq&amp;menu=yes\\" target=\\"_blank\\"><img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/qq.png\\" alt=\\"qq.png\\" /> 在线客服</a> 	</p><br /><p class=\\"pend\\">		Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼 <br /><a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a>      <a target=\\"_blank\\" href=\\"http://www.cnzz.com/stat/website.php?web_id=905537\\">站长统计</a>     友情链接: <a href=\\"http://ju.taobao.com/\\">聚划算</a> <span></span> 	</p>	<div class=\\"pimg\\">		<img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/nanning_police.png\\" alt=\\"nanning_police.png\\" />  <img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/cnnic.png\\" alt=\\"cnnic.png\\" /></div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: field
+errFile:IWEB_PATH/core\util\upload_class.php
+errLine:171
+errTime:14-11-27 14:32:08
+##出错时变量的值：##
+array (
+  'info' => 
+  array (
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined offset: 0
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:239
+errTime:14-11-27 14:33:21
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 0,
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\php55B1.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\php55B1.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    0 => 
+    array (
+      'flag' => -10,
+    ),
+  ),
+  'rs' => 
+  array (
+    'flag' => -10,
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined offset: 0
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:239
+errTime:14-11-27 14:33:43
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 0,
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\phpA9AB.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\phpA9AB.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    0 => 
+    array (
+      'flag' => -10,
+    ),
+  ),
+  'rs' => 
+  array (
+    'flag' => -10,
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined offset: 0
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:280
+errTime:14-11-27 14:36:39
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 'Filedata',
+  'val' => -10,
+  'tmpFile' => 'D:\\wamp\\tmp\\php58B0.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    'Filedata' => 
+    array (
+      'flag' => -10,
+    ),
+  ),
+  'rs' => 
+  array (
+    'flag' => -10,
+  ),
+  'isArray' => false,
+  'innerKey' => 'flag',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined offset: 0
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:239
+errTime:14-11-27 14:37:51
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 0,
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\php74DA.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\php74DA.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    0 => 
+    array (
+      'flag' => -10,
+    ),
+  ),
+  'rs' => 
+  array (
+    'flag' => -10,
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined offset: 0
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:239
+errTime:14-11-27 14:45:45
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 0,
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\phpB036.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\phpB036.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    0 => 
+    array (
+      'flag' => -10,
+    ),
+  ),
+  'rs' => 
+  array (
+    'flag' => -10,
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined index: flag
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:239
+errTime:14-11-27 14:47:31
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 'flag',
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\php4D8F.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\php4D8F.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    'flag' => -10,
+  ),
+  'rs' => -10,
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: ipState
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:236
+errTime:14-11-27 14:51:14
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 'Filedata',
+  'val' => 
+  array (
+    'name' => 'pinganone.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\phpB538.tmp',
+    'error' => 0,
+    'size' => 78371,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\phpB538.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    'one' => 
+    array (
+      'flag' => -10,
+    ),
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined index: one
+errFile:D:\wamp\www\iwebshop\classes\photoupload.php
+errLine:236
+errTime:14-11-27 15:04:21
+##出错时变量的值：##
+array (
+  'isForge' => false,
+  'photoObj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'tableName' => 'li_goods_photo',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'photoArray' => 
+  array (
+  ),
+  'key' => 'Filedata',
+  'val' => 
+  array (
+    'name' => 'TB2MPLDaFXXXXbIXXXXXXXXXXXX_!!553015055.jpg_400x400.jpg',
+    'type' => 'application/octet-stream',
+    'tmp_name' => 'D:\\wamp\\tmp\\phpB626.tmp',
+    'error' => 0,
+    'size' => 63820,
+  ),
+  'tmpFile' => 'D:\\wamp\\tmp\\phpB626.tmp',
+  'result' => NULL,
+  'upObj' => 
+  IUpload::__set_state(array(
+     'allowType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+      3 => 'zip',
+      4 => 'rar',
+      5 => 'docx',
+      6 => 'doc',
+    ),
+     'checkType' => 
+    array (
+      0 => 'jpg',
+      1 => 'gif',
+      2 => 'png',
+    ),
+     'dir' => 'upload/2014/11/27/',
+     'maxsize' => '2000000',
+     'isForge' => false,
+  )),
+  'upState' => 
+  array (
+    'Filedata' => 
+    array (
+      0 => 
+      array (
+        'name' => '20141127030421147.jpg',
+        'dir' => 'upload/2014/11/27/',
+        'size' => 63820,
+        'ininame' => 'TB2MPLDaFXXXXbIXXXXXXXXXXXX_!!553015055.jpg_400x400.jpg',
+        'ext' => 'jpg',
+        'fileSrc' => 'upload/2014/11/27/20141127030421147.jpg',
+        'flag' => 1,
+      ),
+    ),
+  ),
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: brandRow
+errFile:D:\wamp\www\jihuasuan\runtime\default\site\brand_zone.php
+errLine:119
+errTime:14-11-27 16:07:28
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/jihuasuan/runtime/default/site\\brand_zone.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/jihuasuan/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a>               <a href=\\"http://wpa.qq.com/msgrd?v=3&amp;uin=2851080628&amp;site=qq&amp;menu=yes\\" target=\\"_blank\\"><img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/qq.png\\" alt=\\"qq.png\\" /> 在线客服</a> 	</p><br /><p class=\\"pend\\">		Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼 <br /><a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a>      <a target=\\"_blank\\" href=\\"http://www.cnzz.com/stat/website.php?web_id=905537\\">站长统计</a>     友情链接: <a href=\\"http://ju.taobao.com/\\">聚划算</a> <span></span> 	</p>	<div class=\\"pimg\\">		<img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/nanning_police.png\\" alt=\\"nanning_police.png\\" />  <img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/cnnic.png\\" alt=\\"cnnic.png\\" /></div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/jihuasuan/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_brand',
+      'fields' => 'id,name,logo',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by sort asc',
+      'limit' => 'limit 20',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'id' => '1',
+      'name' => '苹果',
+      'logo' => 'upload/2014/11/21/20141121023256688.jpg',
+    ),
+    1 => 
+    array (
+      'id' => '2',
+      'name' => '素舍',
+      'logo' => 'upload/2014/11/21/20141121021632546.jpg',
+    ),
+    2 => 
+    array (
+      'id' => '3',
+      'name' => '中熙',
+      'logo' => 'upload/2014/11/21/20141121023025926.jpg',
+    ),
+    3 => 
+    array (
+      'id' => '4',
+      'name' => '艾',
+      'logo' => 'upload/2014/11/21/20141121023145858.jpg',
+    ),
+    4 => 
+    array (
+      'id' => '5',
+      'name' => 'PIN',
+      'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+    ),
+  ),
+  'item' => 
+  array (
+    'id' => '5',
+    'name' => 'PIN',
+    'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+  ),
+  'key' => 4,
+  'brandId' => 0,
+  'tmpId' => '5',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: brandRow
+errFile:D:\wamp\www\jihuasuan\runtime\default\site\brand_zone.php
+errLine:119
+errTime:14-11-27 16:07:28
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/jihuasuan/runtime/default/site\\brand_zone.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/jihuasuan/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a>               <a href=\\"http://wpa.qq.com/msgrd?v=3&amp;uin=2851080628&amp;site=qq&amp;menu=yes\\" target=\\"_blank\\"><img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/qq.png\\" alt=\\"qq.png\\" /> 在线客服</a> 	</p><br /><p class=\\"pend\\">		Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼 <br /><a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a>      <a target=\\"_blank\\" href=\\"http://www.cnzz.com/stat/website.php?web_id=905537\\">站长统计</a>     友情链接: <a href=\\"http://ju.taobao.com/\\">聚划算</a> <span></span> 	</p>	<div class=\\"pimg\\">		<img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/nanning_police.png\\" alt=\\"nanning_police.png\\" />  <img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/cnnic.png\\" alt=\\"cnnic.png\\" /></div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/jihuasuan/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_brand',
+      'fields' => 'id,name,logo',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by sort asc',
+      'limit' => 'limit 20',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'id' => '1',
+      'name' => '苹果',
+      'logo' => 'upload/2014/11/21/20141121023256688.jpg',
+    ),
+    1 => 
+    array (
+      'id' => '2',
+      'name' => '素舍',
+      'logo' => 'upload/2014/11/21/20141121021632546.jpg',
+    ),
+    2 => 
+    array (
+      'id' => '3',
+      'name' => '中熙',
+      'logo' => 'upload/2014/11/21/20141121023025926.jpg',
+    ),
+    3 => 
+    array (
+      'id' => '4',
+      'name' => '艾',
+      'logo' => 'upload/2014/11/21/20141121023145858.jpg',
+    ),
+    4 => 
+    array (
+      'id' => '5',
+      'name' => 'PIN',
+      'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+    ),
+  ),
+  'item' => 
+  array (
+    'id' => '5',
+    'name' => 'PIN',
+    'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+  ),
+  'key' => 4,
+  'brandId' => 0,
+  'tmpId' => '5',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: brandRow
+errFile:D:\wamp\www\jihuasuan\runtime\default\site\brand_zone.php
+errLine:119
+errTime:14-11-27 16:07:28
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/jihuasuan/runtime/default/site\\brand_zone.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/jihuasuan/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a>               <a href=\\"http://wpa.qq.com/msgrd?v=3&amp;uin=2851080628&amp;site=qq&amp;menu=yes\\" target=\\"_blank\\"><img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/qq.png\\" alt=\\"qq.png\\" /> 在线客服</a> 	</p><br /><p class=\\"pend\\">		Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼 <br /><a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a>      <a target=\\"_blank\\" href=\\"http://www.cnzz.com/stat/website.php?web_id=905537\\">站长统计</a>     友情链接: <a href=\\"http://ju.taobao.com/\\">聚划算</a> <span></span> 	</p>	<div class=\\"pimg\\">		<img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/nanning_police.png\\" alt=\\"nanning_police.png\\" />  <img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/cnnic.png\\" alt=\\"cnnic.png\\" /></div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/jihuasuan/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_brand',
+      'fields' => 'id,name,logo',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by sort asc',
+      'limit' => 'limit 20',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'id' => '1',
+      'name' => '苹果',
+      'logo' => 'upload/2014/11/21/20141121023256688.jpg',
+    ),
+    1 => 
+    array (
+      'id' => '2',
+      'name' => '素舍',
+      'logo' => 'upload/2014/11/21/20141121021632546.jpg',
+    ),
+    2 => 
+    array (
+      'id' => '3',
+      'name' => '中熙',
+      'logo' => 'upload/2014/11/21/20141121023025926.jpg',
+    ),
+    3 => 
+    array (
+      'id' => '4',
+      'name' => '艾',
+      'logo' => 'upload/2014/11/21/20141121023145858.jpg',
+    ),
+    4 => 
+    array (
+      'id' => '5',
+      'name' => 'PIN',
+      'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+    ),
+  ),
+  'item' => 
+  array (
+    'id' => '5',
+    'name' => 'PIN',
+    'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+  ),
+  'key' => 4,
+  'brandId' => 0,
+  'tmpId' => '5',
+)
+<\ERROR_INFO>
+<ERROR_INFO>
+errID:8
+errStr:Undefined variable: brandRow
+errFile:D:\wamp\www\jihuasuan\runtime\default\site\brand_zone.php
+errLine:119
+errTime:14-11-27 16:07:28
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:/wamp/www/jihuasuan/runtime/default/site\\brand_zone.php',
+  'data' => NULL,
+  'myCartObj' => 
+  Cart::__set_state(array(
+     'cartStruct' => 
+    array (
+      'goods' => 
+      array (
+      ),
+      'product' => 
+      array (
+      ),
+    ),
+     'cartExeStruct' => 
+    array (
+      'goods' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'product' => 
+      array (
+        'id' => 
+        array (
+        ),
+        'data' => 
+        array (
+        ),
+      ),
+      'count' => 0,
+      'sum' => 0,
+    ),
+     'cartName' => 'shoppingcart',
+     'maxCount' => 100,
+     'error' => '',
+     'saveType' => 'cookie',
+  )),
+  'myCartInfo' => 
+  array (
+    'goods' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'product' => 
+    array (
+      'id' => 
+      array (
+      ),
+      'data' => 
+      array (
+      ),
+    ),
+    'count' => 0,
+    'sum' => 0,
+  ),
+  'siteConfig' => 
+  Config::__set_state(array(
+     'configFile' => 'D:/wamp/www/jihuasuan/config/site_config.php',
+     'config' => 
+    array (
+      'email_type' => '1',
+      'email_safe' => '',
+      'mail_address' => '',
+      'smtp' => '',
+      'smtp_user' => '',
+      'smtp_pwd' => '',
+      'smtp_port' => '',
+      'order_by' => 'sale',
+      'order_type' => 'desc',
+      'list_type' => 'win',
+      'auto_finish' => '1',
+      'index_slide' => 'a:4:{i:0;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243480.jpg";}i:1;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011243475.jpg";}i:2;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011550257.jpg";}i:3;a:3:{s:4:"name";s:12:"新店开业";s:3:"url";s:13:"www.baidu.com";s:3:"img";s:39:"upload/2014/11/13/20141113011614609.jpg";}}',
+      'name' => '集划算',
+      'url' => 'http://www.jihuasuan.com',
+      'master' => '南宁谷拓网络科技',
+      'qq' => '2355451037',
+      'email' => '2355451037@qq.com',
+      'mobile' => '1234584658',
+      'phone' => '0771-91891989',
+      'address' => '南宁谷拓网络科技',
+      'site_footer_code' => '<div class=\\"footer\\">	<p class=\\"links\\">		<a href=\\"\\">关于我们</a>|<a href=\\"\\">常见问题</a>|<a href=\\"\\">安全交易</a>|<a href=\\"\\">购买流程</a>|<a href=\\"\\">如何付款</a>|<a href=\\"\\">联系我们</a>|<a href=\\"\\">合作提案</a>               <a href=\\"http://wpa.qq.com/msgrd?v=3&amp;uin=2851080628&amp;site=qq&amp;menu=yes\\" target=\\"_blank\\"><img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/qq.png\\" alt=\\"qq.png\\" /> 在线客服</a> 	</p><br /><p class=\\"pend\\">		Copyright © 2014-2014  版权所有:南宁谷拓网络科技有限公司   地址:广西南宁青秀区七星路外经贸大厦17层写字楼 <br /><a class=\\"copyys\\" target=\\"_blank\\" href=\\"http://www.miibeian.gov.cn/\\">桂ICP备01000010号</a>      <a target=\\"_blank\\" href=\\"http://www.cnzz.com/stat/website.php?web_id=905537\\">站长统计</a>     友情链接: <a href=\\"http://ju.taobao.com/\\">聚划算</a> <span></span> 	</p>	<div class=\\"pimg\\">		<img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/nanning_police.png\\" alt=\\"nanning_police.png\\" />  <img src=\\"http://localhost/iwebshop/views/default/skin/default/images/front/cnnic.png\\" alt=\\"cnnic.png\\" /></div></div>',
+      'tax' => '0',
+      'stockup_time' => '1',
+      'regiment_time_limit' => '60',
+      'index_seo_title' => '-集结小划算',
+      'index_seo_keywords' => '集划算，最好的划算平台',
+      'index_seo_description' => '集划算，最好的划算平台',
+      'goods_no_pre' => 'JU',
+      'service_online' => 'a:4:{i:0;a:2:{s:4:"name";s:12:"销售客服";s:2:"qq";s:10:"2851080628";}i:1;a:2:{s:4:"name";s:12:"售后客服";s:2:"qq";s:10:"2851038026";}i:2;a:2:{s:4:"name";s:12:"投诉客服";s:2:"qq";s:10:"2851038026";}i:3;a:2:{s:4:"name";s:12:"充值客服";s:2:"qq";s:10:"2851038023";}}',
+    ),
+  )),
+  'callback' => '',
+  'sonline' => 
+  Sonline::__set_state(array(
+     'path' => '/jihuasuan/plugins/sonline/',
+  )),
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysqli::__set_state(array(
+       'linkRes' => 
+      mysqli::__set_state(array(
+         'affected_rows' => NULL,
+         'client_info' => NULL,
+         'client_version' => NULL,
+         'connect_errno' => NULL,
+         'connect_error' => NULL,
+         'errno' => NULL,
+         'error' => NULL,
+         'field_count' => NULL,
+         'host_info' => NULL,
+         'info' => NULL,
+         'insert_id' => NULL,
+         'server_info' => NULL,
+         'server_version' => NULL,
+         'sqlstate' => NULL,
+         'protocol_version' => NULL,
+         'thread_id' => NULL,
+         'warning_count' => NULL,
+      )),
+    )),
+     'sql' => 
+    array (
+      'table' => 'li_brand',
+      'fields' => 'id,name,logo',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by sort asc',
+      'limit' => 'limit 20',
+      'distinct' => '',
+    ),
+     'tablePre' => 'li_',
+     'paging' => NULL,
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'id' => '1',
+      'name' => '苹果',
+      'logo' => 'upload/2014/11/21/20141121023256688.jpg',
+    ),
+    1 => 
+    array (
+      'id' => '2',
+      'name' => '素舍',
+      'logo' => 'upload/2014/11/21/20141121021632546.jpg',
+    ),
+    2 => 
+    array (
+      'id' => '3',
+      'name' => '中熙',
+      'logo' => 'upload/2014/11/21/20141121023025926.jpg',
+    ),
+    3 => 
+    array (
+      'id' => '4',
+      'name' => '艾',
+      'logo' => 'upload/2014/11/21/20141121023145858.jpg',
+    ),
+    4 => 
+    array (
+      'id' => '5',
+      'name' => 'PIN',
+      'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+    ),
+  ),
+  'item' => 
+  array (
+    'id' => '5',
+    'name' => 'PIN',
+    'logo' => 'upload/2014/11/21/20141121023211865.jpg',
+  ),
+  'key' => 4,
+  'brandId' => 0,
+  'tmpId' => '5',
+)
+<\ERROR_INFO>

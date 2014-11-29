@@ -1,0 +1,95 @@
+<div class="headbar">
+	<div class="position">
+		<span>会员</span><span>></span><span>商户管理</span><span>></span><span>商户回收站</span>
+	</div>
+	<div class="operating">
+		<a href="javascript:;"><button class="operating_btn" type="button" onclick="window.location='{url:/member/seller_list}'"><span class="import">返回列表</span></button></a>
+		<a href="javascript:void(0);" onclick="selectAll('id[]')"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
+		<a href="javascript:void(0)" onclick="seller_restore()"><button class="operating_btn" type="button"><span class="recover">还原</span></button></a>
+		<a href="javascript:void(0)" onclick="seller_del()"><button class="operating_btn" type="button"><span class="delete">永久删除</span></button></a>
+	</div>
+
+	<div class="field">
+		<table class="list_table">
+			<colgroup>
+				<col width="40px" />
+				<col width="140px" />
+				<col width="140px" />
+				<col width="100px" />
+				<col width="100px" />
+				<col width="100px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="150px"/>
+				<col />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="t_c">选择</th>
+					<th>登录用户名</th>
+					<th>真实名称</th>
+					<th>座机</th>
+					<th>移动电话</th>
+					<th>销量</th>
+					<th>VIP</th>
+					<th>状态</th>
+					<th>注册日期</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+
+<form action="{url:/member/seller_recycle_del}" method="post" name="seller_list" onsubmit="return checkboxCheck('id[]','尚未选中任何记录！')">
+	<div class="content">
+		<table class="list_table">
+			<colgroup>
+				<col width="40px" />
+				<col width="140px" />
+				<col width="140px" />
+				<col width="100px" />
+				<col width="100px" />
+				<col width="100px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="150px"/>
+				<col />
+			</colgroup>
+			<tbody>
+				{set:$page=(isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;}
+				{query:name=seller where=is_del eq 1 order=id desc page=$page pagesize=20}
+				<tr>
+					<td class="t_c"><input name="id[]" type="checkbox" value="{$item['id']}" /></td>
+					<td title="{$item['seller_name']}">{$item['seller_name']}</td>
+					<td title="{$item['true_name']}">{$item['true_name']}</td>
+					<td title="{$item['phone']}">{$item['phone']}</td>
+					<td title="{$item['mobile']}">{$item['mobile']}</td>
+					<td title="{$item['sale']}">{$item['sale']}</td>
+					<td>{echo:$item['is_vip'] == 0 ? '否':'是'}</td>
+					<td>{echo:$item['is_lock'] == 0 ? '正常':'锁定'}</td>
+					<td title="{$item['create_time']}">{$item['create_time']}</td>
+					<td>
+						<a href="{url:/member/seller_recycle_restore/id/$item[id]}"><img class="operator" src="{skin:images/admin/icon_recover.gif}" alt="恢复" /></a>
+						<a href="javascript:void(0)" onclick="delModel({link:'{url:/member/seller_recycle_del/id/$item[id]}'})"><img class="operator" src="{skin:images/admin/icon_del.gif}" alt="删除" /></a>
+					</td>
+				</tr>
+				{/query}
+			</tbody>
+		</table>
+	</div>
+	{$query->getPageBar()}
+</form>
+
+<script language="javascript">
+function seller_del()
+{
+	$("form[name='seller_list']").attr('action','{url:/member/seller_recycle_del}');
+	confirm('确定要删除所选中的商户吗？<br />删除的商户不可以找回。','formSubmit(\'seller_list\')');
+}
+function seller_restore()
+{
+	$("form[name='seller_list']").attr('action','{url:/member/seller_recycle_restore}');
+	confirm('确定要还原所选中的商户吗？','formSubmit(\'seller_list\')');
+}
+</script>

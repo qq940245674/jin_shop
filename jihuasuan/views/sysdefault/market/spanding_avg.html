@@ -1,0 +1,76 @@
+{set:
+	$start = IFilter::act(IReq::get('start'));
+	$end   = IFilter::act(IReq::get('end'));
+	$countData = statistics::spandAvg($start,$end);
+}
+
+{js:my97date}
+{js:chart}
+<script type='text/javascript' src='{theme:javascript/event.js}' charset="UTF-8"></script>
+<div class="headbar">
+	<div class="position"><span>统计</span><span>></span><span>基础数据统计</span><span>></span><span>注册用户统计</span></div>
+	<form action='{url:/market/spanding_avg}' method='get'>
+		<input type='hidden' name='controller' value='market' />
+		<input type='hidden' name='action' value='spanding_avg' />
+		<div class="operating">
+			<div class="search f_l">
+				<input type="text" name='start' empty class="Wdate" id="date_start" pattern='date' value="{$start}" alt='' onFocus="WdatePicker()" onblur="FireEvent(this,'onchange')" /> —— <input type="text" empty name='end' value="{$end}" pattern='date' class="Wdate" id="date_end" onFocus="WdatePicker()" onblur="FireEvent(this,'onchange')" />
+				<button class="btn"><span>查 询</span></button>
+			</div>
+		</div>
+    </form>
+</div>
+
+<div class="content_box">
+	<h3>人均消费统计：</h3>
+	<div class='cont'>
+		<ul>
+			<li>人均消费统计，更清楚了解每月用户对销售产品消费情况，更清楚的了解销售产品处在什么趋势，为你下一步的营销计划做出更好的判定！</li>
+		</ul>
+	</div>
+</div>
+
+<div class='content_box'>
+	<div id="myChart" style="min-height:350px;"></div>
+</div>
+
+<script type='text/javascript'>
+//图表生成
+$(function()
+{
+	//图标模板
+	userHighChart = $('#myChart').highcharts(
+	{
+		title:
+		{
+			text:'人均消费统计'
+		},
+		xAxis:
+		{
+			title:
+			{
+				text:'时间'
+			},
+			categories:{echo:JSON::encode(array_keys($countData))},
+		},
+		yAxis:
+		{
+			title:
+			{
+				text:'金额(元)'
+			},
+		},
+		series:
+		[
+			{
+				name:'消费金额',
+				data:{echo:JSON::encode(array_values($countData))}
+			}
+		],
+		tooltip:
+		{
+			valueSuffix:'元'
+		}
+	});
+})
+</script>

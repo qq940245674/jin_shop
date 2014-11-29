@@ -1,0 +1,46 @@
+{js:kindeditor}
+{js:artTemplate}
+<script type='text/javascript' src='{theme:javascript/artTemplate/area_select.js}'></script>
+
+<div class="headbar">
+	<div class="position"><span>会员</span><span>></span><span>会员管理</span><span>></span><span>{if:isset($member['user_id'])}编辑会员{else:}添加会员{/if}</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/member/member_save_cart/}" method="post" name="memberForm">
+			<input name="id" type="hidden" />
+			<table class="form_table">
+				<col width="150px" />
+				<col />
+				<tbody>
+					<tr>
+						<th>用户名：</th>
+						<td><input class="normal" name="username" type="text" value="" disabled /><label>* 用户名称（必填）</label></td>
+					</tr>
+					<tr>
+						<th>银行卡号：</th><td><input class="normal" name="cart" type="text" value="" /></td>
+					</tr>
+					<tr>
+						<th>持卡人姓名：</th><td><input class="normal" name="true_name" type="text"  />{$userInfo['cart']}</td>
+					</tr>
+					<tr>
+						<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</div>
+<script language="javascript">
+//DOM加载完毕
+$(function(){
+
+	//修改模式
+	{if:isset($this->userInfo)}
+		var formObj = new Form('memberForm');
+		formObj.init({echo:JSON::encode($this->userInfo)});
+	{else:}
+		createAreaSelect('province',0,'');
+	{/if}
+});
+</script>

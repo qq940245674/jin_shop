@@ -1,0 +1,117 @@
+{js:artTemplate}
+<script type='text/javascript' src='{theme:javascript/artTemplate/area_select.js}'></script>
+
+<div class="wrapper clearfix">
+	<div class="wrap_box">
+		<div id="fp_form">
+			<h3 class="notice" style='text-align:center;'>申请加盟商户</h3><br>
+			<p class="tips">加入我们的电商平台，成为我们的供应商，一起共创美好未来</p>
+			<div class="box">
+				<form action="{url:/simple/seller_reg}" method="post" enctype='multipart/form-data' name="sellerForm">
+					<table class="form_table">
+						<colgroup>
+							<col width="300px" />
+							<col />
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th>登陆用户名：</th>
+								<td><input class="normal" name="seller_name" type="text" value="" pattern="required" alt="用户名不能为空" /><label>* 用户名称（必填）</label></td>
+							</tr>
+							<tr>
+								<th>密码：</th><td><input class="normal" name="password" type="password" bind='repassword' empty /><label>* 登录密码</label></td>
+							</tr>
+							<tr>
+								<th>确认密码：</th><td><input class="normal" name="repassword" type="password" bind='password' empty /><label>* 重复确认密码</label></td>
+							</tr>
+							<tr>
+								<th>商户真实全称：</th>
+								<td><input class="normal" name="true_name" type="text" value="" pattern="required" /></td>
+							</tr>
+							<tr>
+								<th>商户资质材料：</th>
+								<td>
+									<input type='file' name='paper_img' />
+									{if:isset($this->sellerRow['paper_img']) && $this->sellerRow['paper_img']}
+									<p><a target="_blank" href="{webroot:}{$this->sellerRow['paper_img']}"><img src='{webroot:}{$this->sellerRow['paper_img']}' style='width:320px;border:1px solid #ccc' /></a></p>
+									{/if}
+								</td>
+							</tr>
+							<tr>
+								<th>固定电话：</th>
+								<td><input type="text" class="normal" name="phone" pattern="phone" /><label>* 固定电话联系方式，如：010-88888888</label></td>
+							</tr>
+							<tr>
+								<th>手机号码：</th>
+								<td><input type="text" class="normal" name="mobile" pattern="mobi" /><label>* 移动电话联系方式：如：13000000000</label></td>
+							</tr>
+							<tr>
+								<th>邮箱：</th>
+								<td><input type="text" class="normal" name="email" pattern="email" /><label>* 电子邮箱联系方式：如：aircheng@163.com</label></td>
+							</tr>
+							<tr>
+								<th>地区：</th>
+								<td>
+									<select name="province" child="city,area" onchange="areaChangeCallback(this);"></select>
+									<select name="city" child="area" parent="province" onchange="areaChangeCallback(this);"></select>
+									<select name="area" parent="city"></select>
+								</td>
+							</tr>
+							<tr>
+								<th>详细地址：</th><td><input class="normal" name="address" type="text" empty value="" /></td>
+							</tr>
+							
+							<tr>
+								<td></td>
+								<td>
+									<input class="submit" type="submit" value="申请加盟" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script language="javascript">
+//DOM加载完毕
+$(function(){
+	//初始化地域联动
+	template.compile("areaTemplate",areaTemplate);
+
+	//修改模式
+	{if:isset($this->sellerRow)}
+		var formObj = new Form('sellerForm');
+		formObj.init({echo:JSON::encode($this->sellerRow)});
+
+		//城市设置
+		{if:isset($this->sellerRow['area'])}
+			createAreaSelect('province',0,"{$this->sellerRow['province']}");
+			createAreaSelect('city',"{$this->sellerRow['province']}","{$this->sellerRow['city']}");
+			createAreaSelect('area',"{$this->sellerRow['city']}","{$this->sellerRow['area']}");
+		{else:}
+			createAreaSelect('province',0,"");
+		{/if}
+	{else:}
+		createAreaSelect('province',0,'');
+	{/if}
+});
+
+/**
+ * 生成地域js联动下拉框
+ * @param name
+ * @param parent_id
+ * @param select_id
+ */
+function createAreaSelect(name,parent_id,select_id)
+{
+	//生成地区
+	$.getJSON("{url:/block/area_child}",{"aid":parent_id,"random":Math.random()},function(json)
+	{
+		$('[name="'+name+'"]').html(template.render('areaTemplate',{"select_id":select_id,"data":json}));
+	});
+}
+</script>

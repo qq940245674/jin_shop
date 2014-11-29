@@ -1,0 +1,67 @@
+<article class="module width_full">
+	<header>
+		<h3 class="tabs_involved">订单列表</h3>
+	</header>
+
+	<table class="tablesorter" cellspacing="0">
+		<colgroup>
+			<col width="175px" />
+			<col width="125px" />
+			<col width="135px" />
+			<col width="135px" />
+			<col width="135px" />
+			<col width="155px" />
+			<col />
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th style='text-align:center;'>订单号</th>
+				<th>淘宝订单号</th>
+				<th style='text-align:center;'>买家收货人</th>
+				<th>买家联系电话</th>
+				<th>订单状态</th>
+				<th>买家淘宝状态</th>
+				<th width='250px'>下单时间</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{set:$seller_id = $this->seller['seller_id']}
+			{set:$page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;}
+			{query: name=order_goods as og join=left join goods as go on go.id eq og.goods_id left join order as o on o.id eq og.order_id order=o.id desc where=go.seller_id eq $seller_id and o.if_del eq 0 page=$page fields=o.*,og.is_send group=og.order_id}
+			<tr>
+				<td title="{$item['order_no']}">{$item['order_no']}</td>
+				<td title="{$item['postscript']}">{$item['postscript']}</td>
+				<td title="{$item['accept_name']}" style='text-align:center;'>{$item['accept_name']}</td>
+				<td title="{$item['mobile']}">{$item['mobile']}</td>
+				<td><span name="disStatusColor{$item['distribution_status']}">{echo:Order_class::getOrderDistributionStatusText($item)}</span></td>
+				<td>
+					<span name="payStatusColor{$item['pay_status']}">
+					{echo:Order_class::getOrderPayStatusText($item)}
+					</span>
+				</td>
+				<td title="{$item['create_time']}">{$item['create_time']}</td>
+				<td>
+					{if:Order_class::isGoDelivery($item)}
+					<a href="{url:/seller/order_deliver/id/$item[id]}"><img class="operator" src="{skin:images/main/icn_jump_back.png}" title="立即核实" /></a>
+					{/if}
+					<a href="{url:/seller/order_show/id/$item[id]}"><img title="订单详情" alt="订单详情" src="{skin:images/main/icn_settings.png}" /></a>
+				</td>
+			</tr>
+			{/query}
+		</tbody>
+	</table>
+
+	{$query->getPageBar()}
+</article>
+
+<script type='text/javascript'>
+//DOM加载结束
+$(function(){
+	//高亮色彩
+	$('[name="payStatusColor1"]').addClass('green');
+	$('[name="disStatusColor1"]').addClass('green');
+});
+</script>

@@ -1,0 +1,28 @@
+{set:$seo_data=array(); $site_config=new Config('site_config');$site_config=$site_config->getInfo();}
+{set:$seo_data['title']=$this->noticeRow['title']}
+{if:isset($site_config['name'])}
+	{set:$seo_data['title'].="_".$site_config['name']}
+{/if}
+{set:seo::set($seo_data);}
+
+<div class="position"> <span>您当前的位置：</span> <a href="{url:}"> 首页</a> » <a href="{url:/site/notice}">公告列表</a> » {$this->noticeRow['title']} </div>
+<div class="wrapper clearfix container_2">
+
+<div class="main f_r">
+	<div class="box m_10">
+		<div class="title2">商城公告</div>
+		<div class="cont">
+			<div class="c_box">
+				<h2>{$this->noticeRow['title']}</h2>
+				<div class="partake_bar clearfix">
+					<span class="f_r"></span>发布日期：{$this->noticeRow['time']}
+				</div>
+				<hr class="m_10" />
+				<div class="textcontent">
+					<p>{$this->noticeRow['content']}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

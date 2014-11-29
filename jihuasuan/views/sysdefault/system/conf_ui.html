@@ -1,0 +1,45 @@
+<div class="headbar">
+	<div class="position"><span>系统</span><span>></span><span>网站管理</span><span>></span><span>UI管理</span></div>
+</div>
+<div class="content">
+	{set:$themeList = Common::getSitePlan('theme')}
+	{foreach:items = $themeList key = $theme}
+	<table class='list_table th_right'>
+		<col width='165px' />
+		<col width='70px' />
+		<col />
+		<tbody>
+			<tr>
+				<th rowspan='7'>
+					<div class="thumbnail">
+						<img src="{webroot:$item[thumb]}" width='150px' />
+						{if:Common::isThemeUsed($theme)}
+						<div class="sel"><span>正在使用</span></div>
+						{/if}
+					</div>
+				</th>
+				<th>名称：</th><td>{$item['name']}</td>
+			</tr>
+			<tr><th>目录：</th><td>/views/{$theme}</td></tr>
+			<tr><th>作者：</th><td>{$item['author']}</td></tr>
+			<tr><th>版本：</th><td>{$item['version']}</td></tr>
+			<tr><th>时间：</th><td>{$item['time']}</td></tr>
+			<tr><th>简介：</th><td>{$item['info']}</td></tr>
+			<!-- <tr>
+				<th>操作：</th>
+				<td>
+					{foreach:items = IClient::supportClient() item = $client}
+					<a href="{url:/system/applyTheme/theme/$theme/client/$client}" class='orange'>立即应用于{$client}端</a>
+					&nbsp;&nbsp;&nbsp;
+					{/foreach}
+
+					{if:Common::isThemeUsed($theme)}
+					<a href='{url:/system/conf_skin/theme/$theme}' class='orange'>选择皮肤</a>
+					{/if}
+				</td>
+			</tr> -->
+		</tbody>
+	</table>
+	<br />
+	{/foreach}
+</div>
